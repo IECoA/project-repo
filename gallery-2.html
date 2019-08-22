@@ -48,8 +48,13 @@
         <img src="img\gallery-3_preview.jpg" alt="Фото 2">
       </a>
       <!-- Video in img gallery -->
-      <a href="https://www.youtube.com/watch?v=shgjXbSqYyU" data-poster="img\gallery-2.jpg" class="gallery-link">
-        <img src="img\gallery-2_preview.jpg" alt="Видео 1" class="gallery-image">
+      <a href="https://www.youtube.com/watch?v=shgjXbSqYyU" data-poster="img\gallery-4.jpg" class="gallery-link">
+        <img src="img\gallery-4_preview.jpg" alt="Видео 1" class="gallery-image">
+        <img src="img\video-play.png" alt="" class="gallery-play">
+      </a>
+      <!-- HTML5 Video in img gallery -->
+      <a href="video\video2.mp4" data-poster="img\gallery-6.jpg" class="gallery-link">
+        <img src="img\gallery-6_preview.jpg" alt="Видео 2" class="gallery-image">
         <img src="img\video-play.png" alt="" class="gallery-play">
       </a>
     </div>
@@ -107,6 +112,12 @@
         download: false,
         toogleThumb: false,
         animateThumb: false,
+        youtubePlayerParams: {
+          modestbranding: 1,
+          showinfo: 0,
+          rel: 0,
+          controls: 1
+        },
       });
     </script>
   </body>
