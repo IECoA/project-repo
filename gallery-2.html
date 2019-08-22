@@ -4,8 +4,9 @@
     <link rel="stylesheet" href="css\lightgallery.css">
   </head>
   <body>
-    <h1>Gallery</h1>
-    <a href="gallery-2.html">Gallery 2</a>
+
+    <h1>Gallery 2</h1>
+    <a href="gallery.html">Gallery</a>
 
     <div id="lightgallery-vid">
       <a href="https://www.youtube.com/watch?v=shgjXbSqYyU" data-poster="img\gallery-2_preview.jpg">
@@ -53,13 +54,25 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" charset="utf-8"></script>
-    <script src="js/lightgallery.js" charset="utf-8"></script>
+    <script src="http://sachinchoolur.github.io/lightGallery/static/js/jquery.justifiedGallery.min.js"></script>
+    <script src="http://sachinchoolur.github.io/lightGallery/static/js/transition.js"></script>
+    <script src="http://sachinchoolur.github.io/lightGallery/static/js/collapse.js"></script>
+    <script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lightgallery.js"></script>
+<!--<script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-fullscreen.js"></script>-->
+    <script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-video.js"></script>
+    <script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-autoplay.js"></script>
+
     <!-- activation -->
-    <script>
+    <!--<script>
       lightGallery(document.getElementById('lightgallery-vid'));
       lightGallery(document.getElementById('lightgallery-img'));
       lightGallery(document.getElementById('html5-videos'));
-      //$('#lightgallery').lightGallery();
+    </script>-->
+    <script>
+      $('#lightgallery-vid').lightGallery();
+      $('#html5-videos').lightGallery();
+      $('#lightgallery-img').lightGallery();
     </script>
   </body>
 </html>
