@@ -2,6 +2,24 @@
 <html>
   <head>
     <link rel="stylesheet" href="css\lightgallery.css">
+    <style media="screen">
+      .gallery-link {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+      }
+      .gallery-image {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      .gallery-play {
+        position: absolute;
+        top: calc(50% - 32px);
+        left: calc(50% - 32px);
+      }
+    </style>
   </head>
   <body>
 
@@ -9,17 +27,19 @@
     <a href="gallery.html">Gallery</a>
 
     <div id="lightgallery-vid">
-      <a href="https://www.youtube.com/watch?v=shgjXbSqYyU" data-poster="img\gallery-2_preview.jpg">
-        <img src="img\gallery-2_preview.jpg" alt="Видео 1">
+      <a href="https://www.youtube.com/watch?v=shgjXbSqYyU" data-poster="img\gallery-2_preview.jpg" class="gallery-link">
+        <img src="img\gallery-2_preview.jpg" alt="Видео 1" class="gallery-image">
+        <img src="img\video-play.png" alt="" class="gallery-play">
       </a>
       <a href="https://www.youtube.com/embed/Pq9yPrLWMyU" data-poster="img\gallery-3_preview.jpg">
         <img src="img\gallery-3_preview.jpg" alt="Видео 2">
+        <img src="img\video-play.png" alt="">
       </a>
     </div>
 
     <div id="lightgallery-img" class="review__photo-holder">
-      <a class="gallery-link" href="img/gallery-2.jpg">
-        <img class="gallery-image" src="img\gallery-2_preview.jpg" alt="Фото 1">
+      <a href="img/gallery-2.jpg">
+        <img src="img\gallery-2_preview.jpg" alt="Фото 1">
       </a>
       <a href="img/gallery-3.jpg">
         <img src="img\gallery-3_preview.jpg" alt="Фото 2">
