@@ -1,12 +1,25 @@
-    
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="css\lightgallery.css">
   </head>
   <body>
-    <h1>Gallery Page</h1>
-    <a href="index.html">Link back</a>
+
+    <div id="lightgallery" class="review__photo-holder">
+      <a class="gallery-link" href="https://www.youtube.com/watch?v=shgjXbSqYyU" data-poster="img\gallery-2_preview.jpg">
+        <img class="gallery-image" src="img\gallery-2_preview.jpg" alt="Видео 1">
+      </a>
+      <a class="gallery-link" href="https://www.youtube.com/embed/Pq9yPrLWMyU" data-poster="img\gallery-3_preview.jpg">
+        <img class="gallery-image" src="img\gallery-3_preview.jpg" alt="Видео 2">
+      </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" charset="utf-8"></script>
+    <script src="js/lightgallery.js" charset="utf-8"></script>
+    <!-- activation -->
+    <script>
+      //lightGallery(document.getElementById('lightgallery'));
+      $('#lightgallery').lightGallery();
+    </script>
   </body>
 </html>
