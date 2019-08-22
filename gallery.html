@@ -5,21 +5,59 @@
   </head>
   <body>
 
-    <div id="lightgallery" class="review__photo-holder">
-      <a class="gallery-link" href="https://www.youtube.com/watch?v=shgjXbSqYyU" data-poster="img\gallery-2_preview.jpg">
-        <img class="gallery-image" src="img\gallery-2_preview.jpg" alt="Видео 1">
+    <div id="lightgallery-vid">
+      <a href="https://www.youtube.com/watch?v=shgjXbSqYyU" data-poster="img\gallery-2_preview.jpg">
+        <img src="img\gallery-2_preview.jpg" alt="Видео 1">
       </a>
-      <a class="gallery-link" href="https://www.youtube.com/embed/Pq9yPrLWMyU" data-poster="img\gallery-3_preview.jpg">
-        <img class="gallery-image" src="img\gallery-3_preview.jpg" alt="Видео 2">
+      <a href="https://www.youtube.com/embed/Pq9yPrLWMyU" data-poster="img\gallery-3_preview.jpg">
+        <img src="img\gallery-3_preview.jpg" alt="Видео 2">
       </a>
     </div>
+
+    <div id="lightgallery-img" class="review__photo-holder">
+      <a class="gallery-link" href="img/gallery-2.jpg" data-poster="img\gallery-2_preview.jpg">
+        <img class="gallery-image" src="img\gallery-2_preview.jpg" alt="Фото 1">
+      </a>
+      <a class="gallery-link" href="img/gallery-3.jpg" data-poster="img\gallery-3_preview.jpg">
+        <img class="gallery-image" src="img\gallery-3_preview.jpg" alt="Фото 2">
+      </a>
+    </div>
+
+
+    <!-- Hidden video div -->
+    <div style="display:none;" id="video2">
+        <video class="lg-video-object lg-html5" controls preload="none">
+            <source src="video/video2.mp4" type="video/mp4">
+             Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div style="display:none;" id="video3">
+        <video class="lg-video-object lg-html5" controls preload="none">
+            <source src="video/video3.mp4" type="video/mp4">
+             Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- data-src should not be provided when you use html5 videos -->
+    <ul id="html5-videos">
+      <li data-poster="img\gallery-2_preview.jpg" data-sub-html="video caption1" data-html="#video2" >
+          <img src="img\gallery-2_preview.jpg" />
+      </li>
+      <li data-poster="img\gallery-3_preview.jpg" data-sub-html="video caption2" data-html="#video3" >
+          <img src="img\gallery-3_preview.jpg" />
+      </li>
+    </ul>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" charset="utf-8"></script>
     <script src="js/lightgallery.js" charset="utf-8"></script>
     <!-- activation -->
     <script>
-      //lightGallery(document.getElementById('lightgallery'));
-      $('#lightgallery').lightGallery();
+      lightGallery(document.getElementById('lightgallery-vid'));
+      lightGallery(document.getElementById('lightgallery-img'));
+      lightGallery(document.getElementById('html5-videos'));
+      //$('#lightgallery').lightGallery();
     </script>
   </body>
 </html>
