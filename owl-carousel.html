@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="owl-dist\assets\owl.theme.default.css">
 
     <style media="screen">
-      .video-container {
+      .video-container, .youtube-player {
           background-color:lightgray;
           text-align: center;
           display: flex;
@@ -53,10 +53,18 @@
           -webkit-transition: .4s all;
           -moz-transition: .4s all;
           transition: .4s all;
+          -webkit-filter: brightness(75%);
+          filter: brightness(75%);
       }
 
       .youtube-player img:hover {
-          -webkit-filter: brightness(75%);
+          -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+      }
+
+      .play:hover ~ .youtube-player img {
+        -webkit-filter: brightness(100%);
+        filter: brightness(100%);
       }
 
       .youtube-player .play {
@@ -69,6 +77,12 @@
           position: absolute;
           background: url("img/play-icon.png") no-repeat;
           cursor: pointer;
+      }
+
+      .carousel {
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto
       }
     </style>
   </head>
@@ -105,7 +119,7 @@
     <hr>
 
     <!-- Video Carousel 2 -->
-    <div class="owl-carousel owl-theme owl-video-2" style="max-width: 1200px; margin-right: auto; margin-left: auto;">
+    <div class="owl-carousel owl-theme owl-video-2 carousel" style="max-width: 1200px; margin-right: auto; margin-left: auto;">
       <div class="video-container"><iframe width="380" height="213" src="https://www.youtube.com/embed/shgjXbSqYyU?modestbranding=1&showinfo=0&rel=0&fs=1&color=white" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>Видео 1</div>
       <div class="video-container"><iframe width="380" height="213" src="https://www.youtube.com/embed/ORHVJ84UdHs?modestbranding=1&showinfo=0&rel=0&fs=1&color=white" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>Видео 2</div>
       <div class="video-container"><iframe width="380" height="213" src="https://www.youtube.com/embed/3Jn0b4Eu15s?modestbranding=1&showinfo=0&rel=0&fs=1&color=white" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>Видео 3</div>
@@ -115,14 +129,14 @@
     </div>
 
     <!-- Video Carousel 3 -->
-    <div class="owl-carousel owl-theme owl-video-3">
-      <div class="youtube-player" data-id="shgjXbSqYyU"></div>
-      <div class="youtube-player" data-id="shgjXbSqYyU"></div>
-      <div class="youtube-player" data-id="shgjXbSqYyU"></div>
-      <div class="youtube-player" data-id="shgjXbSqYyU"></div>
-      <div class="youtube-player" data-id="shgjXbSqYyU"></div>
-      <div class="youtube-player" data-id="shgjXbSqYyU"></div>
-      <div class="youtube-player" data-id="shgjXbSqYyU"></div>
+    <div class="owl-carousel owl-theme owl-video-3 carousel">
+      <div class="video-container"><div class="youtube-player" data-id="shgjXbSqYyU"></div>Видео 1</div>
+      <div class="youtube-player" data-id="ORHVJ84UdHs">Видео 2</div>
+      <div class="youtube-player" data-id="3Jn0b4Eu15s">Видео 3</div>
+      <div class="youtube-player" data-id="qTQ60cxP_bQ">Видео 4</div>
+      <div class="youtube-player" data-id="shgjXbSqYyU">Видео 5</div>
+      <div class="youtube-player" data-id="Ol-EsLNwQGw">Видео 6</div>
+      <div class="youtube-player" data-id="gFb42ysuK1Y">Видео 7</div>
     </div>
 
     <!-- jquery plugin -->
