@@ -8,9 +8,9 @@
       .video-container, .youtube-player {
           background-color:lightgray;
           text-align: center;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
+          display: block;
+          /*align-items: center;
+          flex-direction: column;*/
       }
       .ytp-chrome-top-buttons {
           display: none!important;
@@ -62,8 +62,7 @@
           filter: brightness(100%);
       }
 
-      .play:hover ~ .youtube-player img {
-        -webkit-filter: brightness(100%);
+      .youtube-player:hover > div > img {
         filter: brightness(100%);
       }
 
@@ -93,6 +92,7 @@
     <a href="gallery.html">Gallery</a>
 
     <!-- Div Carousel -->
+    <!-- Turn off
     <div class="owl-carousel owl-theme owl-div">
       <div> Your Content 1</div>
       <div> Your Content 2</div>
@@ -102,10 +102,10 @@
       <div> Your Content 6</div>
       <div> Your Content 7</div>
     </div>
-
-    <hr>
+    -->
 
     <!-- Video Carousel -->
+    <!-- Turn off
     <div class="owl-carousel owl-theme owl-video">
         <div class="item-video" data-merge="1"><a class="owl-video" href="https://youtu.be/shgjXbSqYyU">1</a></div>
         <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=FBu_jxT1PkA">2</a></div>
@@ -115,10 +115,12 @@
         <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=0fhoIate4qI">6</a></div>
         <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=EF_kj2ojZaE">7</a></div>
     </div>
+    -->
 
     <hr>
 
     <!-- Video Carousel 2 -->
+    <!-- Turn off
     <div class="owl-carousel owl-theme owl-video-2 carousel" style="max-width: 1200px; margin-right: auto; margin-left: auto;">
       <div class="video-container"><iframe width="380" height="213" src="https://www.youtube.com/embed/shgjXbSqYyU?modestbranding=1&showinfo=0&rel=0&fs=1&color=white" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>Видео 1</div>
       <div class="video-container"><iframe width="380" height="213" src="https://www.youtube.com/embed/ORHVJ84UdHs?modestbranding=1&showinfo=0&rel=0&fs=1&color=white" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>Видео 2</div>
@@ -127,10 +129,11 @@
       <div class="video-container"><iframe width="380" height="213" src="https://www.youtube.com/embed/Ol-EsLNwQGw?modestbranding=1&showinfo=0&rel=0&fs=1&color=white" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>Видео 5</div>
       <div class="video-container"><iframe width="380" height="213" src="https://www.youtube.com/embed/gFb42ysuK1Y?modestbranding=1&showinfo=0&rel=0&fs=1&color=white" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>Видео 6</div>
     </div>
+    -->
 
     <!-- Video Carousel 3 -->
     <div class="owl-carousel owl-theme owl-video-3 carousel">
-      <div class="video-container"><div class="youtube-player" data-id="shgjXbSqYyU"></div>Видео 1</div>
+      <div class="video-container"><div class="youtube-player" data-id="shgjXbSqYyU"></div><p>Наши первые впечатления от фотокниги 20х20</p><p>июнь 2019</p></div>
       <div class="youtube-player" data-id="ORHVJ84UdHs">Видео 2</div>
       <div class="youtube-player" data-id="3Jn0b4Eu15s">Видео 3</div>
       <div class="youtube-player" data-id="qTQ60cxP_bQ">Видео 4</div>
@@ -218,6 +221,7 @@
         iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
         iframe.setAttribute("frameborder", "0");
         iframe.setAttribute("allowfullscreen", "1");
+        iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
         this.parentNode.replaceChild(iframe, this);
     }
 
