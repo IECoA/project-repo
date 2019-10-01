@@ -29,6 +29,7 @@
         font-style: italic;
         color: #7A7A7A;
         margin: 0;
+        font-weight: 400;
       }
       .ytp-chrome-top-buttons {
           display: none!important;
@@ -206,11 +207,14 @@
       $(document).ready(function(){
         $(".owl-video-3").owlCarousel({
           responsive:{
-              480:{
+              300:{
                   items:1
               },
-              1200:{
+              600:{
                   items:2
+              },
+              1200:{
+                  items:3
               }
           }
         });
