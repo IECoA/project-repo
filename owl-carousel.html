@@ -3,8 +3,12 @@
   <head>
     <link rel="stylesheet" href="owl-dist\assets\owl.carousel.css">
     <link rel="stylesheet" href="owl-dist\assets\owl.theme.default.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap&subset=cyrillic"
     <style media="screen">
+      body {
+        font-family: 'Open Sans',sans-serif;
+      }
       .video-container, .youtube-player {
           /*background-color:lightgray;*/
           /*box-shadow: 1px 3px 4px 0px rgba(0, 0, 0, 0.2);*/
@@ -15,10 +19,16 @@
           flex-direction: column;*/
       }
       .video-container p {
-        font-size: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #5E5E5E;
+        padding-left: 15px;
+        margin-bottom: 5px
       }
       .video-container p:last-child {
-        font-size: 20px;
+        font-style: italic;
+        color: #7A7A7A;
+        margin: 0;
       }
       .ytp-chrome-top-buttons {
           display: none!important;
@@ -142,12 +152,12 @@
     <!-- Video Carousel 3 -->
     <div class="owl-carousel owl-theme owl-video-3 carousel">
       <div class="video-container"><div class="youtube-player" data-id="shgjXbSqYyU"></div><p>Наши первые впечатления от фотокниги 20х20</p><p>июнь 2019</p></div>
-      <div class="youtube-player" data-id="ORHVJ84UdHs">Видео 2</div>
-      <div class="youtube-player" data-id="3Jn0b4Eu15s">Видео 3</div>
-      <div class="youtube-player" data-id="qTQ60cxP_bQ">Видео 4</div>
-      <div class="youtube-player" data-id="shgjXbSqYyU">Видео 5</div>
-      <div class="youtube-player" data-id="Ol-EsLNwQGw">Видео 6</div>
-      <div class="youtube-player" data-id="gFb42ysuK1Y">Видео 7</div>
+      <div class="video-container"><div class="youtube-player" data-id="ORHVJ84UdHs"></div><p>Видео отзыв номер 2</p><p>июнь 2019</p></div>
+      <div class="video-container"><div class="youtube-player" data-id="3Jn0b4Eu15s"></div><p>Отзыв о ...</p><p>июль 2016</p></div>
+      <div class="video-container"><div class="youtube-player" data-id="qTQ60cxP_bQ"></div><p>Фотокнига 20х20</p><p>март 2019</p></div>
+      <div class="video-container"><div class="youtube-player" data-id="shgjXbSqYyU"></div><p>Наши первые впечатления от фотокниги 20х20</p><p>август 2019</p></div>
+      <div class="video-container"><div class="youtube-player" data-id="Ol-EsLNwQGw"></div><p>Впечатления от фотокниги 20х20</p><p>декабрь 2019</p></div>
+      <div class="video-container"><div class="youtube-player" data-id="gFb42ysuK1Y"></div><p>Отзыв о календраре для Индипринт</p><p>июнь 2015</p></div>
     </div>
 
     <!-- jquery plugin -->
@@ -194,7 +204,16 @@
       })
 
       $(document).ready(function(){
-        $(".owl-video-3").owlCarousel();
+        $(".owl-video-3").owlCarousel({
+          responsive:{
+              480:{
+                  items:1
+              },
+              1200:{
+                  items:2
+              }
+          }
+        });
       });
     </script>
 
