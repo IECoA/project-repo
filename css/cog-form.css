@@ -1,0 +1,56 @@
+body {
+  background-color: aliceblue;
+}
+.review-form__container {
+  min-height: 200px;
+  margin: 20px 8px;
+}
+.cognito {
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.25);
+  min-height: 200px;
+  background-color: white;
+  max-width: 700px;
+  margin:50px auto;
+}
+.cognito.c-med .c-forms-form {
+  padding: 15px 25px!important;
+}
+.c-choice-question {
+  border-left: 3px solid #2f96d9!important;
+}
+.cognito .c-field.c-error>.c-validation, .cognito .c-validation-row.c-error>.c-validation, .cognito .c-section.c-error>.c-validation, .cognito .c-forms-error.c-error>.c-validation, .cognito .c-field.c-error>div.toggle-on>.c-validation {
+  line-height: 21px;
+}
+.c-page-nav.c-page-previous-page.c-button {
+  background-color: white!important;
+  border: 1px solid #2f96d9!important;
+  color: #2f96d9!important;
+}
+.c-button {
+  padding: 13px 18px!important;
+  transition: background-color 300ms ease,box-shadow 300ms cubic-bezier(.4,0,.2,1);
+}
+#loading-text {
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-family: Helvetica,sans-serif;
+}
+@media (max-width: 447px) {
+  th.c-choice-question {
+    padding: 13px;
+    border-left: 2px solid #2f96d9;
+  }
+  .c-page-page2 .c-action {
+    display: flex;
+    flex-direction: column;
+  }
+  button.c-page-previous-page {
+    order: 2;
+  }
+}
+@media (max-width: 720px) {
+  .cognito .c-span-24 .c-span-14 {
+      width: 100%;
+  }
+}
