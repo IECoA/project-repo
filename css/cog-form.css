@@ -1,6 +1,7 @@
 body {
   background-color: aliceblue;
-  margin:0
+  margin:0;
+  padding: 0 8px;
 }
 .review-form__container {
   min-height: 200px;
@@ -58,6 +59,9 @@ textarea {
 #loading img {
   width: 35px;
   height: auto;
+}
+.cognito .c-forms-form :not(.c-question) > .c-label {
+  font-size: 0.975em!important;
 }
 @media (max-width: 447px) {
   th.c-choice-question {
