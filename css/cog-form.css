@@ -1,19 +1,30 @@
 body {
   background-color: aliceblue;
+  margin:0
 }
 .review-form__container {
   min-height: 200px;
-  margin: 20px 8px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.review-form__container * {
+  transition: all 0.4s ease;
+}
+textarea {
+  transition: none!important
 }
 .cognito {
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.25);
   min-height: 200px;
   background-color: white;
-  max-width: 700px;
   margin:50px auto;
+  position: relative;
 }
 .cognito.c-med .c-forms-form {
   padding: 15px 25px!important;
+}
+.cognito.c-safari.c-sml {
+  padding: 0 6px;
 }
 .c-choice-question {
   border-left: 3px solid #2f96d9!important;
@@ -26,8 +37,10 @@ body {
   border: 1px solid #2f96d9!important;
   color: #2f96d9!important;
 }
-.c-button {
+.cognito .c-action .c-button {
   padding: 13px 18px!important;
+  font-family: 'Open Sans',Helvetica,sans-serif!important;
+  text-transform: uppercase;
   transition: background-color 300ms ease,box-shadow 300ms cubic-bezier(.4,0,.2,1);
 }
 #loading-text {
@@ -35,6 +48,16 @@ body {
   font-size: 1.5em;
   line-height: 1.5em;
   font-family: Helvetica,sans-serif;
+}
+#loading {
+  position: absolute;
+  z-index: 999;
+  left: 35px;
+  top: 21px
+}
+#loading img {
+  width: 35px;
+  height: auto;
 }
 @media (max-width: 447px) {
   th.c-choice-question {
