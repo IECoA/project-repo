@@ -130,7 +130,7 @@ form.m-form {
   -ms-user-select: none;
   user-select: none;
   font-weight: 600;
-  line-height: 1.1rem
+  /*line-height: 1.1rem*/
 }
 .m-form label {
   padding-left: 0.8rem;
@@ -146,6 +146,7 @@ form.m-form {
   text-overflow: ellipsis;
   transform-origin: left bottom;
   transform: translate(0, 2.025rem) scale(1.5);
+  transform: translate(0, 1.9rem) scale(1.4);
   pointer-events: none;
 }
 .m-form input:not(:placeholder-shown) + label,
