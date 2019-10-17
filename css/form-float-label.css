@@ -162,6 +162,7 @@ form.m-form {
   color: #414141
 }
 .m-form .unmask {
+  font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 22px;
   line-height: 1rem;
   border: 0;
