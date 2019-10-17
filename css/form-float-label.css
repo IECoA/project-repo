@@ -163,7 +163,7 @@ form.m-form {
 }
 .m-form .unmask {
   font-size: 22px;
-  height: 37px;
+  line-height: 1rem;
   border: 0;
   display: none;
   background: none;
@@ -172,7 +172,7 @@ form.m-form {
   position: absolute;
   align-self: flex-end;
   outline: none;
-  padding: 0 8px 2px;
+  padding: 0 8px 12px;
   color: rgb(107, 107, 107);
 }
 .m-form input:not(:focus)::-webkit-input-placeholder {
