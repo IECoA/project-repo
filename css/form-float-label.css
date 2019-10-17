@@ -175,6 +175,12 @@ form.m-form {
   padding: 0 8px 12px;
   color: rgb(107, 107, 107);
 }
+.m-form #password[type='text'] ~ .unmask {
+  color: #2F96D9;
+}
+#password[required]:placeholder-shown ~ .unmask {
+  pointer-events: none;
+}
 .m-form input:not(:focus)::-webkit-input-placeholder {
   /* WebKit browsers */
   color: transparent;
