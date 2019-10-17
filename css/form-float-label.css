@@ -193,8 +193,9 @@ form.m-form {
 .m-form input {
   color: #414141
 }
-/*
-.m-form input:not(:focus) {
-  color:transparent
+.m-form input:not(:focus):not(:placeholder-shown):invalid + label {
+  color: #e23030
 }
-*/
+.m-form input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: #e23030
+}
