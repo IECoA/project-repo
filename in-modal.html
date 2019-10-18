@@ -1,28 +1,86 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Modal + Form</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/form-float-label.css">
+    <link rel="stylesheet" href="css/m-form.css">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/951e9d569c.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1>Modals</h1>
     <p>Placeholder</p>
-    <h2>Form</h2>
+    <h2>Forms</h2>
+    <!-- Login Form Design -->
     <form action="" class="m-form">
+      <h1>Войти | Индипринт</h1>
+      <div class="field">
+        <input type="email" name="email" id="email" placeholder="myemail@example.com" required/>
+        <label for="email"><span>Email</span></label>
+        <div class="field-error"><span>Неверный email или пароль</span></div>
+      </div>
+      <div class="field">
+        <div class="error">
+          <p>Неверный email или пароль</p>
+        </div>
+        <input type="password" name="password" id="password" placeholder="Введите пароль" required/>
+        <label for="password"><span>Пароль</span></label>
+        <span class="unmask far fa-eye" type="button" title="Показать или скрыть пароль" onclick="showPassword()"></span>
+      </div>
+      <input type="submit" value="Войти" class="m-button">
+      <div class="splitter"><span>или</span></div>
+      <h2>Войти с помощью</h2>
+      <div class="">
+        <script src="//ulogin.ru/js/ulogin.js"></script>
+        <div id="uLogin" data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,google,yandex,mailru,facebook;hidden=;redirect_uri=https%3A%2F%2Findiprint.ru;mobilebuttons=0;"></div>
+      </div>
+      <div class="links">
+        <p>Забыли пароль?  <br><a href="">Восстановить</a></p>
+        <p>Нет аккаунта? <br><a href="">Зарегистироваться</a></p>
+      </div>
+    </form>
+    <!-- Reset Password -->
+    <form action="" class="m-form">
+      <h1>Забыли пароль?</h1>
+      <p>Введите email ниже. На него будет отправлено письмо для восстановления пароля.</p>
+      <div class="field">
+        <input type="email" name="email" id="email" placeholder="myemail@example.com" required/>
+        <label for="email"><span>Email</span></label>
+      </div>
+      <input type="submit" value="Восстановить пароль" class="m-button">
+      <div class="links">
+        <p>Вспомнили пароль?  <br><a href="">Войти на сайт</a></p>
+        <p>Нет аккаунта? <br><a href="">Зарегистироваться</a></p>
+      </div>
+    </form>
+    <!-- Register -->
+    <form action="" class="m-form">
+      <h1>Регистрация</h1>
       <div class="field">
         <input type="email" name="email" id="email" placeholder="myemail@example.com" required/>
         <label for="email"><span>Email</span></label>
       </div>
       <div class="field">
-        <input type="password" name="password" id="password" placeholder="Введите пароль" required/>
+        <input type="password" name="password" id="password" placeholder="Введите пароль" pattern=".{4,}" required/>
         <label for="password"><span>Пароль</span></label>
-        <span class="unmask" type="button" title="Показать или скрыть пароль" onclick="showPassword()">&#128065;</span>
+        <span class="unmask far fa-eye" type="button" title="Показать или скрыть пароль" onclick="showPassword()"></span>
       </div>
-      <p><input type="submit"></p>
+      <div class="columns">
+        <div class="field">
+          <input type="text" name="name" id="email" placeholder="Елена" pattern="^[А-Яа-яЁё\s]+$" required/>
+          <label for="text"><span>Имя</span></label>
+        </div>
+        <div class="field">
+          <input type="text" name="name" id="email" placeholder="Петрова" pattern="^[А-Яа-яЁё\s]+$" required/>
+          <label for="text"><span>Фамилия</span></label>
+        </div>
+      </div>
+      <input type="submit" value="Зарегистироваться" class="m-button">
+      <div class="links">
+        <p>Уже зарегистрированы?  <br><a href="">Войти на сайт</a></p>
+      </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/m-form.js" charset="utf-8"></script>

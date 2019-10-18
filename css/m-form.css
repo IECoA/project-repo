@@ -1,0 +1,340 @@
+html {
+  font-size: 15px;
+  background-color: lightgray;
+}
+
+body {
+  font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
+  font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#333;
+  max-width: 700px;
+  padding: 0 30px;
+  margin:0 auto;
+}
+
+form.m-form {
+  max-width: 320px;
+  max-width: 380px;
+  color: #676767;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px 40px;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  /* temp */
+  margin-bottom: 2em;
+}
+.m-form p {
+  color: #333333;
+  font-size: 13px;
+  margin:0
+}
+.m-form .field {
+  margin: 0 0 -2px 0;
+  margin-bottom: 0.1em
+}
+.m-form h1, .m-form h2, .m-form h3 {
+  color:#333333;
+  font-weight: 600;
+  text-align: center;
+}
+.m-form h1 {
+  font-size: 26px
+}
+.m-form .splitter {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 1rem 0;
+}
+.m-form .splitter > span {
+  position: relative;
+  display: inline-block;
+}
+.m-form .splitter > span:before, .m-form .splitter > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 9999px;
+  height: 1px;
+  background: lightgray;
+}
+
+.m-form .splitter > span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.m-form .splitter > span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+.m-form .field {
+  display: flex;
+  flex-flow: column-reverse;
+}
+.m-form label, .m-form input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+.m-form [type='text'], .m-form [type='password'], .m-form [type='date'], .m-form [type='datetime'], .m-form [type='datetime-local'], .m-form [type='month'], .m-form [type='week'], .m-form [type='email'], .m-form [type='number'], .m-form [type='search'], .m-form [type='tel'], .m-form [type='time'], .m-form [type='url'], .m-form [type='color'],
+.m-form textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.3375rem;
+  height: 2.4625rem;
+  padding: 0.5rem;
+  color: #414141;
+  padding-left: 11px;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background-color: #fefefe;
+  -webkit-box-shadow: inset 0 0 0 50px #fff, -1px 1px 3px #00000017;
+  box-shadow: inset 0 0 0 50px #fff, -1px 1px 3px #00000012;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.m-form input:focus {
+  outline: 0;
+  border-color: #2F96D9;
+}
+.m-form label > span {
+  background-color: white;
+  background: white;
+  box-shadow: 6px 0 0 white, -6px 0 0 white;
+  font-size: 12px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 400
+}
+.m-form label {
+  padding-left: 0.8rem;
+  padding-left: 10px;
+  line-height: 1rem;
+  letter-spacing: 0.02em
+}
+.m-form input:placeholder-shown + label {
+  cursor: text;
+  color: #7b7b7b;
+  font-weight: 400;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 1.9rem) scale(1.4);
+  transform: translate(0, 1.9rem) scale(1.3);
+  pointer-events: none;
+}
+.m-form input:not(:placeholder-shown) + label,
+.m-form input:focus + label {
+  transform: translate(0, 0.45rem) scale(1);
+  padding-left: 12px;
+  color: #2F96D9;
+  cursor: pointer;
+  text-transform: inherit;
+}
+.m-form input:not(:placeholder-shown):not(:focus) + label {
+  color: #414141
+}
+.m-form .unmask {
+  font-size: 18px;
+  line-height: 1rem;
+  border: 0;
+  display: none;
+  background: none;
+  cursor: pointer;
+  width: auto;
+  position: absolute;
+  align-self: flex-end;
+  outline: none;
+  padding: 11px 8px;
+  color: rgb(107, 107, 107);
+}
+#password ~ .unmask {
+  font-size: 18px;
+  border: 0;
+  display: none;
+  background: none;
+  cursor: pointer;
+  width: auto;
+  position: absolute;
+  align-self: flex-end;
+  outline: none;
+  color: rgb(107, 107, 107)
+}
+#password[required]:focus ~ .unmask, #password[required]:not(:placeholder-shown) ~ .unmask {
+  display: block;
+}
+[type='password'] ~ button.unmask {
+  color: rgb(107, 107, 107)
+}
+[type='text']:not(:placeholder-shown) ~ button.unmask {
+  color: #2F96D9
+}
+.m-form #password[type='text'] ~ span.unmask {
+  color: #2F96D9;
+}
+#password[required]:placeholder-shown ~ span.unmask {
+  pointer-events: none;
+  opacity: 0.4
+}
+.m-button {
+  margin-top:20px;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 13px 18px;
+  border-radius: 4px;
+  background-color: #2f96d9;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2);
+  -webkit-transition: background-color 300ms ease,box-shadow 300ms cubic-bezier(.4,0,.2,1);
+  transition: background-color 300ms ease,box-shadow 300ms cubic-bezier(.4,0,.2,1);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+}
+.m-button:hover {
+    background-color: #1f8acf;
+    color: #fff;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,.12), 0 4px 5px 0 rgba(0,0,0,.14), 0 2px 4px -1px rgba(0,0,0,.2);
+}
+
+.m-form input:not(:focus)::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+  transition: inherit;
+}
+.m-form input:not(:focus):-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+  transition: inherit;
+}
+.m-form input:not(:focus)::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: transparent;
+  transition: inherit;
+}
+.m-form input:not(:focus):-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: transparent;
+  transition: inherit;
+}
+
+.m-form input:not(:focus):not(:placeholder-shown):invalid + label {
+  color: #e23030
+}
+.m-form input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: #e23030
+}
+
+.m-form .links {
+  display: flex;
+  margin: 3rem 0 0 0;
+  flex-wrap: wrap;
+  color:#333333;
+  font-size: 13px;
+}
+.links > p:not(:only-child) {
+  width: 50%
+}
+.links > p:last-of-type:not(:only-child) {
+  text-align: right;
+}
+.links > p:only-child {
+  text-align: center;
+  width: 100%;
+}
+a, a:link, a:visited {
+  color: #2f96d9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #2482bf
+}
+.m-form input::placeholder {
+  font-size: 1rem;
+  color: #9c9c9c
+}
+span.sr-only {
+  display: none
+}
+.m-form > .columns {
+  display: flex;
+}
+.m-form > .columns > div:not(:last-child) {
+  margin-right: 15px
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+ {
+  /*border: 0;*/
+  -webkit-text-fill-color: #ссс;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
+}
+
+.field .error {
+  background-color: red;
+  color: white;
+  font-size: 13px;
+  display: none
+}
+.field .error p {
+  margin: 0;
+  padding: 0
+}
+.field-error {
+  position: absolute;
+  padding-right: 12px;
+  font-size: 12px;
+  color: #e23030;
+  align-self: flex-end;
+  transform: translateY(24px);
+}
+.field-error > span {
+  background-color: white;
+  background: white;
+  box-shadow: 6px 0 0 white, -6px 0 0 white;
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    margin: 0;
+    padding: 0
+  }
+  form.m-form {
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
