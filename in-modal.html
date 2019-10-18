@@ -30,15 +30,15 @@
         <span class="unmask far fa-eye" type="button" title="Показать или скрыть пароль" onclick="showPassword()"></span>
       </div>
       <input type="submit" value="Войти" class="m-button">
-      <div class="splitter"><span>или</span></div>
-      <h2>Войти с помощью</h2>
-      <div class="">
-        <script src="//ulogin.ru/js/ulogin.js"></script>
-        <div id="uLogin" data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,google,yandex,mailru,facebook;hidden=;redirect_uri=https%3A%2F%2Findiprint.ru;mobilebuttons=0;"></div>
-      </div>
       <div class="links">
         <p>Забыли пароль?  <br><a href="">Восстановить</a></p>
         <p>Нет аккаунта? <br><a href="">Зарегистироваться</a></p>
+      </div>
+      <div class="splitter"><span>или</span></div>
+      <h2>Войти с помощью</h2>
+      <div style="display:flex;justify-content: center;">
+        <script src="//ulogin.ru/js/ulogin.js"></script>
+        <div id="uLogin" data-ulogin="display=panel;theme=flat;fields=first_name,last_name;providers=vkontakte,google,yandex,mailru,facebook;hidden=;redirect_uri=https%3A%2F%2Findiprint.ru;mobilebuttons=0;"></div>
       </div>
     </form>
     <!-- Reset Password -->
