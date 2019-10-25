@@ -11,15 +11,24 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <button data-featherlight="#m-form">Модальное окно</button>
+    <button class="m-button" data-featherlight="#m-form">Модальное окно</button>
     <div class="m-form picker" id="m-form">
       <form action="" id="l-vypuskForm">
         <div class="l-tab">
           <h4>Тип выпускного:</h3>
-          <div class="form-line picker__type">
-            <button class="picker-button" type="button" name="button"><span><img src="img\vypusk-icon\2-photobook-02.png" alt="">Фотокнига</span></button>
-            <button class="picker-button" type="button" name="button"><span><img src="img\vypusk-icon\2-flexbind-03.png" alt="">Фотокнига Flexbind</span></button>
-            <button class="picker-button" type="button" name="button"><span><img src="img\vypusk-icon\2-photoalbum-04.png" alt="">Фотоальбом</span></button>
+          <div class="form-line picker__type2">
+            <div>
+              <input id="type-1" type="radio" name="type-option" checked>
+              <label class="btn-picker" for="type-1"><div><img src="https://iecoa.github.io/project-repo/img\vypusk-icon\2-photobook-02.png" alt=""></div><span>Фотокнига</span></label>
+            </div>
+            <div>
+              <input id="type-2" type="radio" name="type-option">
+              <label class="btn-picker" for="type-2"><div><svg xmlns="http://www.w3.org/2000/svg" id="fa" data-name="fa" viewBox="0 0 81 57"><defs><style>.cls-1{fill:none}.cls-1,.cls-2{stroke-miterlimit:10;stroke-width:1.98px}.cls-2{fill:#fff}</style></defs><title>Фотоальбом - Иконка</title><polygon class="cls-1" points="1.75 54.5 38.13 51.38 38.13 55.75 42.63 55.75 42.63 51.38 79 54.63 75.63 11.75 69.91 11.27 5.38 11.27 1.75 54.5"/><polygon class="cls-2" points="11 1.83 7.25 44.42 40.17 48.5 73.08 44.17 69 1.83 40.17 9.5 11 1.83"/><line class="cls-2" x1="40.17" y1="9.5" x2="40.17" y2="48.5"/></svg></div><span>Фотокнига Flexbind</span></label>
+            </div>
+            <div>
+              <input id="type-3" type="radio" name="type-option">
+              <label class="btn-picker" for="type-3"><div><img src="img\vypusk-icon\FA-mini.svg" alt=""></div><span>Фотоальбом</span></label>
+            </div>
           </div>
           <h4>Формат выпускного:</h3>
           <div class="form-line picker__format">

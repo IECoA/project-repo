@@ -137,8 +137,8 @@ body {
   transform: translate(0, 1.9rem) scale(1.3);
   pointer-events: none;
 }
-.m-form input:not(:placeholder-shown) + label,
-.m-form input:focus + label {
+.m-form input:not(:placeholder-shown):not([type='radio']) + label,
+.m-form input:focus:not([type='radio']) + label {
   transform: translate(0, 0.45rem) scale(1);
   padding-left: 12px;
   color: #2F96D9;
