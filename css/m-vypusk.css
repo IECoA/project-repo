@@ -68,10 +68,11 @@
   background-color: #fff;
   font-size: 14px;
   border-radius: 3px;
-  padding: 11px 20px 5px;
+  padding: 11px 16px 5px;
   flex: 1 1 0px;
   max-width: 173px;
   width: 0;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .picker-button:focus {
   outline:none;
