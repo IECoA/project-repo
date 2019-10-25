@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/m-form.css">
     <link rel="stylesheet" href="css/m-vypusk.css">
+    <link rel="stylesheet" href="css/featherlight.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <div class="m-form picker">
+    <button data-featherlight="#m-form">Модальное окно</button>
+    <div class="m-form picker" id="m-form">
       <form action="" id="l-vypuskForm">
         <div class="tab">
           <h4>Тип выпускного:</h3>
@@ -70,6 +72,16 @@
         </div>
       </form>
     </div>
-    <script src="js\m-form.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/m-form.js" charset="utf-8"></script>
+
+    <script src="js/featherlight.min.js" charset="utf-8"></script>
+    <script>
+      $.extend($.featherlight.defaults, {
+        openSpeed: 100,
+        closeSpeed: 200,
+        variant: 'l-modal-form',
+      });
+    </script>
   </body>
 </html>
