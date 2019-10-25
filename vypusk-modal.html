@@ -14,7 +14,7 @@
     <button data-featherlight="#m-form">Модальное окно</button>
     <div class="m-form picker" id="m-form">
       <form action="" id="l-vypuskForm">
-        <div class="tab">
+        <div class="l-tab">
           <h4>Тип выпускного:</h3>
           <div class="form-line picker__type">
             <button class="picker-button" type="button" name="button"><span><img src="img\vypusk-icon\2-photobook-02.png" alt="">Фотокнига</span></button>
@@ -49,7 +49,7 @@
           </div>
           <button type="button" name="button" id="nextBtn" onclick="nextPrev(1)" class="m-button">Далее</button>
         </div>
-        <div class="tab">
+        <div class="l-tab">
           <h4 class="contact">Ваши контактные данные:</h3>
           <div class="form-line contact">
             <div class="field">
@@ -80,6 +80,7 @@
       $.extend($.featherlight.defaults, {
         openSpeed: 100,
         closeSpeed: 200,
+        persist: true,
         variant: 'l-modal-form',
       });
     </script>
