@@ -74,7 +74,7 @@ body {
   display: flex;
   flex-flow: column-reverse;
 }
-.m-form label, .m-form input {
+.m-form input:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']) ~ label, .m-form input:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']) {
   transition: all 0.2s;
   touch-action: manipulation;
 }
@@ -101,11 +101,11 @@ body {
   -moz-appearance: none;
   appearance: none;
 }
-.m-form input:focus {
+.m-form input:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']):focus {
   outline: 0;
   border-color: #2F96D9;
 }
-.m-form label > span {
+.m-form input:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']) + label > span {
   background-color: white;
   background: white;
   box-shadow: 6px 0 0 white, -6px 0 0 white;
@@ -118,7 +118,7 @@ body {
   user-select: none;
   font-weight: 400
 }
-.m-form label {
+.m-form input:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']) + label {
   padding-left: 0.8rem;
   padding-left: 10px;
   line-height: 1rem;
@@ -137,13 +137,17 @@ body {
   transform: translate(0, 1.9rem) scale(1.3);
   pointer-events: none;
 }
-.m-form input:not(:placeholder-shown):not([type='radio']) + label,
-.m-form input:focus:not([type='radio']) + label {
+.m-form input:not(:placeholder-shown):not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']) + label,
+.m-form input:focus:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']) + label {
   transform: translate(0, 0.45rem) scale(1);
   padding-left: 12px;
   color: #2F96D9;
   cursor: pointer;
   text-transform: inherit;
+}
+.m-form input:not(:placeholder-shown):not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']) + label,
+.m-form input:focus:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']) + label {
+  cursor: pointer;
 }
 .m-form input:not(:placeholder-shown):not(:focus) + label {
   color: #414141
@@ -212,9 +216,9 @@ body {
   width: 100%;
 }
 .m-button:hover {
-    background-color: #1f8acf;
-    color: #fff;
-    box-shadow: 0 1px 10px 0 rgba(0,0,0,.12), 0 4px 5px 0 rgba(0,0,0,.14), 0 2px 4px -1px rgba(0,0,0,.2);
+  background-color: #1f8acf;
+  color: #fff;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.12), 0 4px 5px 0 rgba(0,0,0,.14), 0 2px 4px -1px rgba(0,0,0,.2);
 }
 
 .m-form input:not(:focus)::-webkit-input-placeholder {

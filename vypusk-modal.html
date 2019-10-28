@@ -5,38 +5,61 @@
     <title>Выпускные NEW - Модальное окно</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/m-form.css">
-    <link rel="stylesheet" href="css/m-vypusk.css">
+    <!--<link rel="stylesheet" href="css/m-vypusk.css">-->
+    <link rel="stylesheet" href="css/m-vypusk_clean.css">
     <link rel="stylesheet" href="css/featherlight.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <button class="m-button" data-featherlight="#m-form">Модальное окно</button>
+    <button class="m-button" data-featherlight="#m-form" onlick="tabReset()">Модальное окно</button>
     <div class="m-form picker" id="m-form">
       <form action="" id="l-vypuskForm">
         <div class="l-tab">
           <h4>Тип выпускного:</h3>
-          <div class="form-line picker__type2">
+          <div class="form-line picker__type">
             <div>
               <input id="type-1" type="radio" name="type-option" checked>
-              <label class="btn-picker" for="type-1"><div><img src="https://iecoa.github.io/project-repo/img\vypusk-icon\2-photobook-02.png" alt=""></div><span>Фотокнига</span></label>
+              <label class="btn-picker" for="type-1"><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.42 57.39"><title>fk-mini2</title><polygon points="1.09 55.15 37.46 52.02 37.46 56.4 41.96 56.4 41.96 52.02 78.34 55.27 74.96 12.4 69.25 11.92 4.71 11.92 1.09 55.15" fill="#fff" stroke-miterlimit="10" stroke-width="1.98"/><path d="M40,49.36c-11.46-9.58-21-1.67-32.62-.5L11,7.28c11.17-2.67,17.5-11,29,.83C51.71-6.47,61,7.61,68.56,3L73,48.78C62.38,48.53,51,38.61,40,49.36Z" transform="translate(-0.29 -0.3)" fill="#fff" stroke-miterlimit="10" stroke-width="1.98"/><line x1="39.71" y1="7.81" x2="39.71" y2="48.12" fill="#fff" stroke-miterlimit="10" stroke-width="1.98"/><rect x="37.22" y="48.95" width="4.98" height="1.71" fill="#fff"/></svg></div><span>Фотокнига</span></label>
             </div>
             <div>
               <input id="type-2" type="radio" name="type-option">
-              <label class="btn-picker" for="type-2"><div><svg xmlns="http://www.w3.org/2000/svg" id="fa" data-name="fa" viewBox="0 0 81 57"><defs><style>.cls-1{fill:none}.cls-1,.cls-2{stroke-miterlimit:10;stroke-width:1.98px}.cls-2{fill:#fff}</style></defs><title>Фотоальбом - Иконка</title><polygon class="cls-1" points="1.75 54.5 38.13 51.38 38.13 55.75 42.63 55.75 42.63 51.38 79 54.63 75.63 11.75 69.91 11.27 5.38 11.27 1.75 54.5"/><polygon class="cls-2" points="11 1.83 7.25 44.42 40.17 48.5 73.08 44.17 69 1.83 40.17 9.5 11 1.83"/><line class="cls-2" x1="40.17" y1="9.5" x2="40.17" y2="48.5"/></svg></div><span>Фотокнига Flexbind</span></label>
+              <label class="btn-picker" for="type-2"><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.42 55.11"><title>fb-mini</title><polygon points="1.09 52.87 37.46 49.74 37.46 54.12 41.96 54.12 41.96 49.74 78.34 52.99 74.96 10.12 69.25 9.63 4.71 9.63 1.09 52.87" fill="none" stroke-miterlimit="10" stroke-width="1.98"/><path d="M10.79,6.08l-3.25,43c14.25,0,24.81-1.74,32.36-1.5V8.5C37.18,5.27,22.46,6.1,10.79,6.08Z" transform="translate(-0.29 -1.05)" fill="#fff" stroke-miterlimit="10" stroke-width="1.98"/><path d="M65.29,2.83c-8.5,6.33-14.08.83-25.39,5.67h0V47.58c9.64-.5,19,2.08,32.55,1.5Z" transform="translate(-0.29 -1.05)" fill="#fff" stroke-miterlimit="10" stroke-width="1.98"/></svg></div><span>Фотокнига Flexbind</span></label>
             </div>
             <div>
               <input id="type-3" type="radio" name="type-option">
-              <label class="btn-picker" for="type-3"><div><img src="img\vypusk-icon\FA-mini.svg" alt=""></div><span>Фотоальбом</span></label>
+              <label class="btn-picker" for="type-3"><div><svg xmlns="http://www.w3.org/2000/svg" id="fa" data-name="fa" viewBox="0 0 81 57"><defs><style>.cls-1{fill:none}.cls-1,.cls-2{stroke-miterlimit:10;stroke-width:1.98px}.cls-2{fill:#fff}</style></defs><title>Фотоальбом - Иконка</title><polygon class="cls-1" points="1.75 54.5 38.13 51.38 38.13 55.75 42.63 55.75 42.63 51.38 79 54.63 75.63 11.75 69.91 11.27 5.38 11.27 1.75 54.5"/><polygon class="cls-2" points="11 1.83 7.25 44.42 40.17 48.5 73.08 44.17 69 1.83 40.17 9.5 11 1.83"/><line class="cls-2" x1="40.17" y1="9.5" x2="40.17" y2="48.5"/></svg></div><span>Фотоальбом</span></label>
             </div>
           </div>
           <h4>Формат выпускного:</h3>
-          <div class="form-line picker__format">
+          <!--<div class="form-line picker__format">
             <button class="picker-button" type="button" name="button"><span><div><figure id="s2015"></figure></div><p>20×15</p></span></button>
             <button class="picker-button" type="button" name="button"><span><div><figure id="s2020"></figure></div><p>20×20</p></span></button>
             <button class="picker-button" type="button" name="button"><span><div><figure id="s2230"></figure></div><p>22×30</p></span></button>
             <button class="picker-button" type="button" name="button"><span><div><figure id="s3022"></figure></div><p>30×22</p></span></button>
             <button class="picker-button" type="button" name="button"><span><div><figure id="s3030"></figure></div><p>30×30</p></span></button>
+          </div>-->
+          <div class="form-line picker__format">
+            <div>
+              <input id="format-1" type="radio" name="format-option">
+              <label class="btn-picker" for="format-1"><div><figure id="s2015"></figure></div><span>20×15</span></label>
+            </div>
+            <div>
+              <input id="format-2" type="radio" name="format-option" checked>
+              <label class="btn-picker" for="format-2"><div><figure id="s2020"></figure></div><span>20×20</span></label>
+            </div>
+            <div>
+              <input id="format-3" type="radio" name="format-option" class="disabled">
+              <label class="btn-picker" for="format-3"><div><figure id="s2230"></figure></div><span>22×30</span></label>
+            </div>
+            <div>
+              <input id="format-4" type="radio" name="format-option">
+              <label class="btn-picker" for="format-4"><div><figure id="s3022"></figure></div><span>30×22</span></label>
+            </div>
+            <div>
+              <input id="format-5" type="radio" name="format-option">
+              <label class="btn-picker" for="format-5"><div><figure id="s3030"></figure></div><span>30×30</span></label>
+            </div>
           </div>
           <div class="form-line add">
             <div class="column">
