@@ -250,9 +250,10 @@ label.btn-picker {
   width: 100%
 }
 .form-line.picker__format input.disabled + label.btn-picker {
-  opacity: 0.6;
+  opacity: 0.48;
   pointer-events:none;
   cursor: auto;
+  color: #000000
 }
 .form-line.picker__type input, .form-line.picker__format input {
   display: block;
@@ -361,6 +362,21 @@ label.btn-picker {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.l-modal-form.featherlight .featherlight-close-icon {
+  font-size: 21px;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  width: 1.6em;
+  line-height: 1.6em;
+  color: #6d6d6d;
+  transition: color 0.2s;
+}
+.l-modal-form.featherlight .featherlight-close-icon:hover {
+  color:#000
+}
+.l-modal-form.featherlight .featherlight-close-icon:focus {
+  color:#2f96d9;
+  outline: none
 }
 
 /* Media --- less 690 px */
