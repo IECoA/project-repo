@@ -101,7 +101,7 @@ body {
   -moz-appearance: none;
   appearance: none;
 }
-.m-form input:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']):focus {
+.m-form input:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']):focus, textarea:focus {
   outline: 0;
   border-color: #2F96D9;
 }

@@ -178,7 +178,7 @@ h4.contact {
 }
 .form-line.contact textarea {
   margin: 15px 0 0 0;
-  height: 75px;
+  height: 87px;
   resize: vertical;
   font-size: 13px
 }
@@ -505,6 +505,11 @@ label.btn-picker {
     padding: 8px 9px 4px;
   }
 }
+@media screen and (max-width: 380px) {
+  br.mobile {
+    display: block
+  }
+}
 
 /* Animation and Featherlight */
 .m-form.picker {
@@ -515,6 +520,7 @@ label.btn-picker {
   -webkit-box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  border-bottom: none
 }
 /* Scrollbar Margin Fix */
 @media screen and (min-width: 960px) {
