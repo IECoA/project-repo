@@ -62,6 +62,10 @@ function validateForm() {
   return valid;
 }
 //}
+/*
 function tabReset() {
   currentTab = 0;
+  var x = document.getElementsByClassName("l-tab");
+  x[0].style.display = "block";
 }
+*/

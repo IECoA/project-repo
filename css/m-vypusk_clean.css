@@ -176,6 +176,12 @@
 h4.contact {
   margin: 0;
 }
+.form-line.contact textarea {
+  margin: 15px 0 0 0;
+  height: 75px;
+  resize: vertical;
+  font-size: 13px
+}
 .m-form.picker .m-button {
   width:auto;
   margin: 0 auto;

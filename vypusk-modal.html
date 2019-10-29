@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <button class="m-button" data-featherlight="#m-form" onlick="tabReset()">Модальное окно</button>
+    <button class="m-button" data-featherlight="#m-form" onclick="tabReset()">Модальное окно</button>
     <div class="m-form picker" id="m-form">
       <form action="" id="l-vypuskForm">
         <div class="l-tab">
@@ -98,6 +98,9 @@
                 <label for="phone"><span>Телефон</span></label>
               </div>
             </div>
+            <div class="field">
+              <textarea name="msg" id="msg" placeholder="(необязательно) Если вам требуются изделия с нестандартными параметрами или большой тираж, напишите об этом"></textarea>
+            </div>
           </div>
           <input type="submit" value="оставить заявку" class="m-button">
           <button type="button" name="button" id="prevBtn" onclick="nextPrev(-1)" class="m-button">Назад</button>
@@ -110,8 +113,8 @@
     <script src="js/featherlight.min.js" charset="utf-8"></script>
     <script>
       $.extend($.featherlight.defaults, {
-        openSpeed: 100,
-        closeSpeed: 200,
+        openSpeed: 250,
+        closeSpeed: 250,
         persist: true,
         variant: 'l-modal-form',
       });
