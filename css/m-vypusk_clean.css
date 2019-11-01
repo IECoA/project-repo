@@ -465,6 +465,9 @@ label.btn-picker {
     margin: 0 0 20px 0;
     padding: 9px 18px
   }
+  .l-tab.current {
+    display: block;
+  }
   .l-tab #nextBtn, .l-tab #prevBtn {
     display: block
   }

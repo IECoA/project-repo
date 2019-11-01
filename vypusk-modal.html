@@ -4,17 +4,19 @@
     <meta charset="utf-8">
     <title>Выпускные NEW - Модальное окно</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" as="script">-->
     <link rel="stylesheet" href="css/m-form.css">
     <!--<link rel="stylesheet" href="css/m-vypusk.css">-->
     <link rel="stylesheet" href="css/m-vypusk_clean.css">
     <link rel="stylesheet" href="css/featherlight.min.css">
+    <link rel="stylesheet" href="css\parsley.css">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <button class="m-button" data-featherlight="#m-form" onclick="tabReset()">Модальное окно</button>
+    <button class="m-button" data-featherlight="#m-form" onclick="">Модальное окно</button>
     <div class="m-form picker" id="m-form">
-      <form action="" id="l-vypuskForm">
+      <form action="" id="l-vypuskForm" data-parsley-validate>
         <div class="l-tab">
           <h4>Тип выпускного:</h3>
           <div class="form-line picker__type">
@@ -64,7 +66,7 @@
           <div class="form-line add">
             <div class="column">
               <p>Количество альбомов:</p>
-              <input type="number" maxlength="256" id="amount-field" name="amount" min="10" value="10" oninput="this.className = ''" required>
+              <input type="number" maxlength="256" id="amount-field" name="amount" min="10" value="10" oninput="this.className = ''" required data-parsley-no-focus>
               <div>
                 <input type="checkbox" id="add-design" name="add-design" checked>
                 <label for="add-design">Услуги дизайна (+6000 ₽)</label>
@@ -79,7 +81,7 @@
               </div>
             </div>
           </div>
-          <button type="button" name="button" id="nextBtn" onclick="nextPrev(1)" class="m-button">Далее</button>
+          <button type="button" name="button" id="nextBtn" onclick="" class="m-button">Далее</button>
         </div>
         <div class="l-tab">
           <h4 class="contact">Ваши контактные данные:</h3>
@@ -94,7 +96,7 @@
                 <label for="email"><span>Email</span></label>
               </div>
               <div class="field">
-                <input type="tel" name="phone" id="phone" placeholder="+7 (999) 123-44-55" pattern="(\+?\d[- .]*){7,13}" required="">
+                <input type="tel" name="phone" id="phone" placeholder="+7 (999) 123-44-55" pattern="" required="" data-mask-selectonfocus="true">
                 <label for="phone"><span>Телефон</span></label>
               </div>
             </div>
@@ -108,7 +110,6 @@
       </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/m-form.js" charset="utf-8"></script>
 
     <script src="js/featherlight.min.js" charset="utf-8"></script>
     <script>
@@ -119,5 +120,10 @@
         variant: 'l-modal-form',
       });
     </script>
+
+    <script src="js\parsley.js" charset="utf-8"></script>
+    <script src="js\ru.js" charset="utf-8"></script>
+    <script src="js\jquery.mask.min.js" charset="utf-8"></script>
+    <script src="js/m-form.js" charset="utf-8"></script>
   </body>
 </html>
