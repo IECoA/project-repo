@@ -11,6 +11,12 @@ function showPassword() {
 // Phone mask
 $('#phone').mask('+7 (000) 000-00-00');
 
+//demask?
+$('#phone').parsley().on('field:validate', function() {
+  // In here, `this` is the parlsey instance of #some-input
+  $('#phone').cleanVal();
+});
+
 /* Change Placeholder jQuery */
 /*
 $('input[type=email]').focus(function() {
