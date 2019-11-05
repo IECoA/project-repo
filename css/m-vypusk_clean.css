@@ -396,7 +396,7 @@ h4.h--type::after {
   padding-top: 1px;
   width: 19px;
   font-weight: 600;
-  text-align: center;
+  text-align: center
 }
 textarea#msg {
   display: none
