@@ -18,7 +18,7 @@
     <div class="m-form picker" id="m-form">
       <form action="" id="l-vypuskForm" data-parsley-validate>
         <div class="l-tab">
-          <h4>Тип выпускного:</h3>
+          <h4 class="h--type">Тип выпускного:</h4>
           <div class="form-line picker__type">
             <div>
               <input id="type-1" type="radio" name="type-option" checked>
@@ -33,7 +33,7 @@
               <label class="btn-picker" for="type-3"><div><svg xmlns="http://www.w3.org/2000/svg" id="fa" data-name="fa" viewBox="0 0 81 57"><defs><style>.cls-1{fill:none}.cls-1,.cls-2{stroke-miterlimit:10;stroke-width:1.98px}.cls-2{fill:#fff}</style></defs><title>Фотоальбом - Иконка</title><polygon class="cls-1" points="1.75 54.5 38.13 51.38 38.13 55.75 42.63 55.75 42.63 51.38 79 54.63 75.63 11.75 69.91 11.27 5.38 11.27 1.75 54.5"/><polygon class="cls-2" points="11 1.83 7.25 44.42 40.17 48.5 73.08 44.17 69 1.83 40.17 9.5 11 1.83"/><line class="cls-2" x1="40.17" y1="9.5" x2="40.17" y2="48.5"/></svg></div><span>Фотоальбом</span></label>
             </div>
           </div>
-          <h4>Формат выпускного:</h3>
+          <h4>Формат выпускного:</h4>
           <!--<div class="form-line picker__format">
             <button class="picker-button" type="button" name="button"><span><div><figure id="s2015"></figure></div><p>20×15</p></span></button>
             <button class="picker-button" type="button" name="button"><span><div><figure id="s2020"></figure></div><p>20×20</p></span></button>
@@ -84,7 +84,7 @@
           <button type="button" name="button" id="nextBtn" onclick="" class="m-button">Далее</button>
         </div>
         <div class="l-tab">
-          <h4 class="contact">Ваши контактные данные:</h3>
+          <h4 class="contact">Ваши контактные данные:</h4>
           <div class="form-line contact">
             <div class="field">
               <input type="text" name="name" id="name" placeholder="Елена Петрова" pattern="^[А-Яа-яЁё\s]+$" required="">
@@ -99,6 +99,17 @@
                 <input type="tel" name="phone" id="phone" placeholder="+7 (999) 123-44-55" pattern="" required="" data-mask-selectonfocus="true">
                 <label for="phone"><span>Телефон</span></label>
               </div>
+            </div>
+            <div class="field">
+              <div class="drowdown--wrapper">
+                <select class="" name="user-type" required>
+                  <option hidden disabled selected value>-- Укажите, кем Вы являетесь --</option>
+                  <option value="prof">Фотограф или дизайнер</option>
+                  <option value="class">Учитель / Представитель родительского комитета</option>
+                  <option value="stud">Выпускник</option>
+                  <option value="other">Другое</option>
+                </select>
+            </div>
             </div>
             <div class="field">
               <textarea name="msg" id="msg" placeholder="(необязательно)&#10;Если вам требуются изделия с нестандартными параметрами или большой тираж, напишите об этом."></textarea>
