@@ -14,7 +14,7 @@
   padding: 30px 35px;
   margin: 0 auto
 }
-.m-form.picker h1, .m-form.picker h2, .m-form.picker h3, .m-form.picker h4, .m-form.picker h5, .m-form.picker h6 {
+.picker h1, .picker h2, .picker h3, .picker h4, .picker h5, .picker h6 {
   text-align: left;
   font-size: 16px;
   font-weight: 600;
