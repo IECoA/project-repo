@@ -544,13 +544,13 @@ textarea#msg {
 }
 /* Scrollbar Margin Fix */
 @media screen and (min-width: 960px) {
-  html {
+  /*html {
     margin-left: calc(100vw - 100%);
     margin-right: 0;
-  }
-  /*html.with-featherlight {
-    padding-right: 17px
   }*/
+  html.with-featherlight {
+    padding-right: 17px
+  }
 }
 
 /* Animation */
