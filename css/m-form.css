@@ -112,6 +112,9 @@ body {
   display: flex;
   line-height: 0.7em;
 }
+.m-form select option {
+  font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 .m-form .drowdown--wrapper {
   display: flex;
   flex-direction: column;

@@ -102,11 +102,12 @@
 }
 .form-line.add [type='number'] {
   display: inline-block;
-  width: 43px;
+  width: 3.3em;
   height: 31px;
   margin-left: 10px;
-  padding: 4px 1px 4px 6px;
-  text-align: start;
+  padding: 4px 1px 4px 4px;
+  text-align: center;
+
 }
 .form-line.add > div:not(:last-child) > div {
   margin: 12px 0 0 0
