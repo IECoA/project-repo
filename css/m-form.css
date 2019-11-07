@@ -107,9 +107,10 @@ body {
   border-color: #2F96D9;
 }
 .m-form select {
-  margin: 15px 0 0 0;
+  margin: 16px 0 0;
   position: relative;
   display: flex;
+  line-height: 0.7em;
 }
 .m-form .drowdown--wrapper {
   display: flex;
