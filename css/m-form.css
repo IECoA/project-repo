@@ -101,6 +101,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-user-select: text;
 }
 .m-form input:not([type='checkbox']):not([type='submit']):not([type='radio']):not([type='button']):not([type='file']):focus, textarea:focus, select:focus {
   outline: 0;
@@ -110,7 +111,7 @@ body {
   margin: 16px 0 0;
   position: relative;
   display: flex;
-  line-height: 0.7em;
+  line-height: 1em;
 }
 .m-form select option {
   font-family:"Open Sans"
