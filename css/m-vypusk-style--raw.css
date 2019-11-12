@@ -362,7 +362,7 @@ img {
   color: #000;
 }
 .owl-prev:before, .owl-next:before {
-  content: url(../img/next-icon.svg);
+  content: url(../img/vypusk-icon/next-icon.svg);
   display: block;
   width: 21px;
   height: 36px
@@ -578,7 +578,7 @@ section#actions {
   background-color: #c8d5ff;
   box-shadow: 2px 2px 8px -2px rgba(0,0,0,.52);
   transition: box-shadow 225ms ease-in-out;
-  background-image: url(../img/Grad-1-mini.jpg);
+  background-image: url(../img/vypusk-img/Grad-1-mini.jpg);
   width: 170px;
   border-radius: 0 3px 3px 0;
   height: 170px
