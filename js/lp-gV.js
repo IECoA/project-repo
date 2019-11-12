@@ -120,7 +120,7 @@ $(document).ready(function(){
         items:1,
         loop:true
     },
-    600:{
+    1030:{
         items:2,
         margin:50,
         loop:true

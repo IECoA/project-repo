@@ -501,6 +501,7 @@ section#actions {
   height: auto;
   display: flex;
   flex-direction: column;
+  user-select: none;
 }
 #reviews .review__container > div {
   flex: 1 1 0
@@ -684,6 +685,7 @@ section#actions {
   margin: 0 0 35px 0;
   font-size: 20px;
   font-weight: 600;
+  color: #333333;
   max-width: 350px;
   line-height: 1.2em;
   counter-increment: howto-counter
