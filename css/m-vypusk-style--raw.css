@@ -221,7 +221,6 @@ img {
   background-color: #F5F5F5;
   padding: 27px 30px;
   position: relative;
-  margin-bottom: 36px;
   max-width: 100%;
   color: #5E5E5E;
   font-size: 14px;
@@ -288,10 +287,24 @@ img {
 }
 .review__container .review__text {
   font-size: 13px;
-  white-space: pre-wrap;
-  line-height: 23px;
-  margin: 27px 0;
+  white-space: pre-line;
+  line-height: 1.7em;
+  margin: 22px 0 0 0;
   overflow-x: hidden;
+  border-left: 5px solid #e3e3e3;
+  padding: 5px 20px;
+}
+blockquote::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+}
+
+blockquote::-webkit-scrollbar {
+    width: 10px
+}
+
+blockquote::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey
 }
 .review__container .review__photo-holder {
   width: auto;
@@ -306,7 +319,7 @@ img {
   overflow: auto;
 }
 .review__container .review__photo-holder > a > img {
-  height: 60px;
+  height: 70px;
   width: auto;
   margin-right: 16px;
   flex-shrink: 0;
@@ -325,7 +338,7 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
-.review__star .review__stars-holder {
+.review__stars-holder .review__star {
   background-image: url(https://indiprint.ru/static/site/rewievs/img/star-act.svg);
   background-repeat-y: no-repeat;
   width: 20px;
@@ -356,6 +369,7 @@ img {
   width: calc(100% + 100px);
   left: -50px;
   height: calc(100% - 37px);
+  pointer-events: none
 }
 .review-carousel.owl-theme .owl-nav i {
   font-size: 2.5rem;
@@ -373,6 +387,7 @@ img {
 .owl-carousel.review-carousel .owl-nav button.owl-prev, .owl-carousel.review-carousel .owl-nav button.owl-next {
   margin: 0;
   padding: 0 5px!important;
+  pointer-events: auto
 }
 .owl-nav button:focus {
   outline: none
@@ -386,17 +401,20 @@ img {
 
 /* Page level CSS */
 .p-la .banner.bs1 {
-  background-color: #885656
+  background-color: #885656;
+  background-image: url(../img/vypusk-img/New-header-det.jpg);
 }
 .p-la .banner.bs2 {
-  background-color: #ffc5fd;
+  background-color: #2e303f;
   background-image: url(../img/vypusk-img/New-header_9-11.jpg);
 }
 .p-la .banner.bs3 {
-  background-color: #4f6382
+  background-color: #4f6382;
+  background-image: url(../img/vypusk-img/New-header-grad.jpg);
 }
 .p-la .banner.bs4 {
-  background-color: #597533
+  background-color: #597533;
+  background-image: url(../img/vypusk-img/New-header-event.jpg);
 }
 section#actions {
   border-bottom: 1px solid #e4e4e4
@@ -412,7 +430,7 @@ section#actions {
 }
 #intro > div.inner-container .banner--tabs-wrapper {
   position: absolute;
-  bottom: 30px;
+  bottom: 18px;
 }
 #intro .banner--content-wrapper {
   align-self: flex-start;
@@ -476,6 +494,17 @@ section#actions {
   align-content: center;
   align-items: center;
   padding: 0 10px
+}
+#reviews .review__container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+#reviews .review__container > div {
+  flex: 1 1 0
+}
+#reviews .review__container .review__text {
+  max-height: 190px
 }
 .banner--tabs-wrapper {
 
