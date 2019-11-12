@@ -11,19 +11,6 @@ function showPassword() {
 // Phone mask
 $('#phone').mask('+7 (000) 000-00-00');
 
-//demask?
-/*
-$('#phone').parsley().on('field:validate', function() {
-  $('#phone').cleanVal();
-  $('#phone').unmask();
-  console.log('Validation failed for: ', this.$element);
-});
-$(function() {
-  $('#l-vypuskForm').parsley().on('field:validated', function() {
-
-  }
-}*/
-
 // jQuery Form Tabs + Validation
 if (window.matchMedia("(max-width: 560px)").matches) {
 $(function () {
@@ -68,22 +55,6 @@ $(function () {
   navigateTo(0); // Start at the beginning
 });
 }
-
-
-/* Change Placeholder jQuery */
-/*
-$('input[type=email]').focus(function() {
-    $(this).attr('placeholder', 'myemail@example.com')
-}).blur(function() {
-    $(this).attr('placeholder', '\u200C')
-})
-$('input[type=password]').focus(function() {
-    $(this).attr('placeholder', 'Введите ваш пароль')
-}).blur(function() {
-    $(this).attr('placeholder', '\u200C')
-})
-*/
-
 
 // Form Tabs
 
@@ -133,3 +104,78 @@ function tabReset() {
   x[0].style.display = "block";
 }
 */
+
+
+
+// Vypusk JS
+$(document).ready(function(){
+  $(".review-carousel").owlCarousel({
+  margin:20,
+  nav:true,
+  mouseDrag: false,
+  navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+  //navContainer: '.custom-nav',
+  responsive:{
+    300:{
+        items:1,
+        loop:true
+    },
+    600:{
+        items:2,
+        margin:50,
+        loop:true
+    }
+    }
+  });
+});
+
+// Tabs Self
+var radioTab;
+var tabContent;
+var bannerTabs
+
+window.onload = function() {
+    tabContent = document.getElementsByClassName('tab-wrapper');
+    radioTab = document.getElementsByClassName('tab');
+    bannerTabs = document.getElementsByClassName('bs-tabs');
+    document.getElementById('bs2').click();
+    hideTabsContent(1);
+}
+
+function hideTabsContent(a) {
+    for (var i=a; i<tabContent.length; i++) {
+        tabContent[i].classList.remove('show');
+        tabContent[i].classList.add("hide");
+    }
+}
+
+document.getElementById('type-tab').onclick = function (event)   {
+    var target = event.target;
+    var targetParent = target.parentNode;
+    if (targetParent.className == 'tab') {
+       for (var i=0; i<radioTab.length; i++) {
+           if (targetParent == radioTab[i]) {
+               showTabsContent(i);
+               break;
+}}}}
+
+function showTabsContent(b){
+    if (tabContent[b].classList.contains('hide')) {
+        hideTabsContent(0);
+        tabContent[b].classList.remove('hide');
+        tabContent[b].classList.add('show');
+    }
+}
+
+document.getElementById('bs').onclick = function (bsSwitcher) {
+  var banner = document.getElementById('intro');
+  var bClass = banner.classList.value;
+  var bTarget = event.target;
+  var bTargetID = bTarget.id;
+  banner.className = 'banner ' + bTargetID;
+
+  for (var i=0; i<bannerTabs.length; i++) {
+    bannerTabs[i].classList.remove("active");
+  }
+  bTarget.className = 'bs-tabs active';
+}
