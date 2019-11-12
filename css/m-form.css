@@ -1,13 +1,13 @@
 html {
   font-size: 15px;
-  background-color: lightgray;
 }
 
-body {
+body.forms {
   font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
   font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   color:#333;
   max-width: 700px;
+  background-color: lightgray;
   padding: 0 30px;
   margin:0 auto;
 }
@@ -223,7 +223,7 @@ body {
   pointer-events: none;
   opacity: 0.4
 }
-.m-button {
+.m-form .m-button {
   margin-top:20px;
   font-size: 14px;
   color: #ffffff;
@@ -244,7 +244,7 @@ body {
   cursor: pointer;
   width: 100%;
 }
-.m-button:hover {
+.m-form .m-button:hover {
   background-color: #1f8acf;
   color: #fff;
   box-shadow: 0 1px 10px 0 rgba(0,0,0,.12), 0 4px 5px 0 rgba(0,0,0,.14), 0 2px 4px -1px rgba(0,0,0,.2);

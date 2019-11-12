@@ -154,9 +154,10 @@ img {
 .m-button:hover {
   background-color: #1f8acf;
   color: #fff;
+  text-decoration: none;
   box-shadow: 0 1px 10px 0 rgba(0,0,0,.12), 0 4px 5px 0 rgba(0,0,0,.14), 0 2px 4px -1px rgba(0,0,0,.2)
 }
-.m-button:hover, .m-button:focus {
+.m-button:hover, .m-button:focus, .m-button:link, .m-button:visited {
   color: #fff
 }
 .m-button.t-button {
@@ -357,7 +358,7 @@ blockquote::-webkit-scrollbar-thumb {
   max-width: 85%;
 }
 .owl-carousel.review-carousel div.review__wrapper {
-  padding: 16px 3px 3px 3px;
+  padding: 16px 6px 6px 5px
 }
 .review-carousel.owl-theme .owl-nav {
   position: absolute;
@@ -443,6 +444,7 @@ section#actions {
 #actions > div.inner-container {
   display: flex;
   flex-direction: row;
+  flex-flow: wrap
 }
 #actions > div.inner-container > div {
   display: flex;
@@ -586,6 +588,7 @@ section#actions {
   flex-wrap: nowrap;
   justify-content: space-between;
   margin-bottom: 30px;
+  flex-flow: wrap;
   width: 100%
 }
 #examples .template-row > div {
@@ -812,4 +815,14 @@ section#actions {
 }
 .custom-nav {
 
+}
+
+
+@media screen and (max-width: 520px) {
+  #examples .template-row {
+    flex-wrap: wrap
+  }
+  .fl.column-fw-se {
+    flex-flow: wrap;
+  }
 }
