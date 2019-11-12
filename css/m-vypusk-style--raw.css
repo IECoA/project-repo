@@ -401,7 +401,7 @@ blockquote::-webkit-scrollbar-thumb {
 
 /* Page level CSS */
 .p-la .banner.bs1 {
-  background-color: #885656;
+  background-color: #8591cb;
   background-image: url(../img/vypusk-img/New-header-det.jpg);
 }
 .p-la .banner.bs2 {
@@ -409,11 +409,11 @@ blockquote::-webkit-scrollbar-thumb {
   background-image: url(../img/vypusk-img/New-header_9-11.jpg);
 }
 .p-la .banner.bs3 {
-  background-color: #4f6382;
+  background-color: #a0a3a8;
   background-image: url(../img/vypusk-img/New-header-grad.jpg);
 }
 .p-la .banner.bs4 {
-  background-color: #597533;
+  background-color: #839885;
   background-image: url(../img/vypusk-img/New-header-event.jpg);
 }
 section#actions {
