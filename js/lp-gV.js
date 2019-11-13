@@ -110,22 +110,24 @@ function tabReset() {
 // Vypusk JS
 $(document).ready(function(){
   $(".review-carousel").owlCarousel({
-  nav:false,
+  nav:true,
   mouseDrag: false,
   navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
   //navContainer: '.custom-nav',
   responsive:{
     250:{
         items:1,
-        loop:true
+        loop:true,
+        nav:false
     },
-    480:{
+    550:{
         nav:true,
+        items:1,
         margin:20
     },
     1030:{
         items:2,
-        margin:50,
+        margin:42,
         loop:true
     }
     }

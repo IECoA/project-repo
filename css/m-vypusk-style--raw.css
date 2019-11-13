@@ -18,8 +18,7 @@ img {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 45px;
-  padding-bottom: 50px;
+  padding: 45px 25px 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -365,11 +364,11 @@ blockquote::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   margin-top: 0;
-  top: 0;
+  top: 16px;
   width: 100%;
   width: calc(100% + 100px);
   left: -50px;
-  height: calc(100% - 37px);
+  height: calc(100% - 53px);
   pointer-events: none
 }
 .review-carousel.owl-theme .owl-nav i {
@@ -423,26 +422,33 @@ section#actions {
 #intro  > div.inner-container {
   height: 100%;
   position: relative;
+  padding-bottom: 15px
 }
 #intro.banner {
   height: 640px;
   background-position: 50% 50%;
   background-size: cover;
+  transition: background-image .3s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 #intro > div.inner-container .banner--tabs-wrapper {
-  position: absolute;
-  bottom: 18px;
   align-self: center
 }
 #intro .banner--content-wrapper {
   align-self: flex-start;
   justify-content: center;
   margin-left: 8vw;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 15px;
 }
 #intro .banner--content-wrapper h1, #intro .banner--content-wrapper p {
   color:#fff
 }
 #actions > div.inner-container {
+  padding-left: 0;
+  padding-right: 0;
   display: flex;
   flex-direction: row;
   flex-flow: wrap
@@ -472,7 +478,7 @@ section#actions {
   font-weight: 600;
 }
 #pros .inner-container > div {
-  width:85%;
+  width:90%;
   margin: 25px 0
 }
 #pros .inner-container > div h4 {
@@ -542,6 +548,7 @@ section#actions {
   align-items: center;
   justify-content: center;
   border: 1px solid gray;
+  border-radius: 4px;
   background-color: #fff;
   pointer-events: auto;
 }
@@ -640,7 +647,7 @@ section#actions {
   height: 100%;
   background-image: url(https://indiprint.ru/static/site/photobooks/images/book-mask.png);
   background-position: 0% 0%;
-  background-size: 100% 101%;
+  background-size: 100.5% 101.2%
 }
 #how-to .column-container {
   display: flex;
@@ -713,7 +720,19 @@ section#actions {
   background-color: #2F96D9;
   border-radius: 50%;
 }
+.picker h4 {
+  display: flex;
+}
+.picker h4 span {
+  margin-left: auto;
+  align-self: center;
+  color: #2f96d9;
+  font-size: 12px;
+  font-weight: 400
+}
 .tab-wrapper {
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 3px 7px 2px #00000013;
   background: #f3f3f3;
   background: #ffffff;
@@ -759,22 +778,24 @@ section#actions {
   border: 1px solid #dedede
 }
 #grad-calc div > img + div {
-  padding: 10px 12px;
   border-radius: 0 0 3px 3px;
-  padding: 10px 14px 0
+  padding: 14px 14px 4px
 }
 #grad-calc div > img + div h3 {
   font-size: 20px;
   font-weight: 600;
   line-height: 27px;
   color: #38404A;
-  margin-bottom: 5px
+  margin-bottom: 7px
 }
 #grad-calc div > img + div p {
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 0;
   font-weight: 400;
-  line-height: 19px
+  line-height: 1.5em
+}
+#grad-calc div > img + div p > strong {
+  font-size: 14px
 }
 
 @-webkit-keyframes fadeIn {
@@ -807,16 +828,9 @@ section#actions {
   flex-shrink: 0;
 }
 .gallery__img-placeholder {
-  width: 200px;
   height: 200px;
-  background-color: gray;
-}
-.TEMP-slide {
-  height: 320px;
-  background-color: lightgray
-}
-.custom-nav {
-
+  width: 200px;
+  background-color: gray
 }
 
 @media (min-width: 992px) {
@@ -837,6 +851,7 @@ section#actions {
   }
   #grad-calc > div:first-of-type {
     max-width: 560px;
+    margin: 0;
     margin-bottom: 18px
   }
   #examples .template-row{
@@ -848,11 +863,20 @@ section#actions {
   #pros .inner-container > div {
     width: 95%
   }
+  #grad-calc > div:last-child .m-button {
+    margin-top: 2em;
+  }
 }
 @media (max-width: 767px) {
   .inner-container {
     padding-left: 15px;
     padding-right: 15px
+  }
+  #actions > div.inner-container {
+    flex-flow: column nowrap;
+  }
+  #actions > div.inner-container > div:last-of-type {
+    border: none
   }
   #examples .template-row {
     flex-wrap: wrap
@@ -864,6 +888,10 @@ section#actions {
   #grad-calc > div:first-of-type {
     max-width: 100%;
     margin-bottom: 18px
+  }
+  #grad-calc > div:last-child {
+    width: 100%;
+    max-width: 560px;
   }
   #pros .inner-container > div {
     flex-direction: column;
@@ -917,6 +945,38 @@ section#actions {
   #how-to h3 {
     display: none
   }
+  .review-carousel.owl-theme .owl-nav {
+      width: calc(100% + 70px);
+      left: -35px
+  }
+  .review__container {
+    padding: 27px 20px;
+  }
+  .review__container .review__text {
+    border: none;
+    padding: 0 15px 0 0
+  }
+  #grad-calc div > img + div {
+    display: none
+  }
+  #grad-calc .tab-wrapper {
+    padding: 7px
+  }
+}
+@media (max-width: 550px) {
+  .owl-carousel.review-carousel {
+    max-width: 100%
+  }
+  #grad-calc > div:last-child .grid--2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .price-container + div {
+    display: none
+  }
+  #grad-calc > div:last-child .m-button {
+    margin-top: 2em;
+  }
 }
 @media (max-width: 479px) {
   #how-to .inner-container > ul li {
@@ -924,7 +984,7 @@ section#actions {
     padding: 7px 10px;
     letter-spacing: -0.02em
   }
-  .owl-carousel.review-carousel {
-    max-width: 100%
+  .review__container {
+    padding: 27px 7px 27px 20px;
   }
 }
