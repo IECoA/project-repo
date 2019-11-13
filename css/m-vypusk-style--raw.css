@@ -204,13 +204,6 @@ img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: ". . . . ." ". . . . .";
-  grid-gap: 20px;
-}
 .atn-box {
   padding: 20px 22px;
   background-color: #f3f3f3;
@@ -354,7 +347,7 @@ blockquote::-webkit-scrollbar-thumb {
 /* Owl Navigation */
 .owl-carousel.review-carousel {
   position: relative;
-  max-width: 85%;
+  max-width: 95%;
 }
 .owl-carousel.review-carousel div.review__wrapper {
   padding: 16px 6px 6px 5px
@@ -533,9 +526,6 @@ section#actions {
 #how-to .inner-container > ul {
   display: none
 }
-.banner--tabs-wrapper {
-
-}
 .banner--tabs-wrapper > div {
   border: 1px solid gray;
   flex: 1 1 0;
@@ -619,15 +609,43 @@ section#actions {
   flex-flow: wrap;
   width: 100%
 }
-#examples .template-row > div:not(:last-child) {
-  margin: 0 30px 30px 0
+#examples .template-gallery {
+  display: flex;
+  flex-wrap: wrap;
 }
-#examples .template-row a {
+#examples .template-gallery > div {
+  flex: 1 0 calc(20% - 30px);
+  display: flex;
+  margin-bottom: 40px
+}
+#examples .template-gallery > div:not(:nth-child(5n)) {
+  margin-right: 30px
+}
+#examples .template-gallery a {
   position: relative;
   display: flex;
   height: fit-content;
 }
-#examples .template-row a:hover:after {
+#examples .template-gallery > div > a > div {
+  background-color: #c8d5ff;
+  box-shadow: 2px 2px 8px -2px rgba(0,0,0,.52);
+  background-image: url(../img/vypusk-img/Grad-1-mini.jpg);
+  width: 170px;
+  border-radius: 0 3px 3px 0;
+  height: 170px
+}
+#examples .template-gallery a:hover > div {
+  box-shadow: 5px 5px 3px -1px rgba(0,0,0,.13), 2px 2px 8px -2px rgba(0,0,0,.52);
+}
+#examples .template-gallery > div > a > div > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://indiprint.ru/static/site/photobooks/images/book-mask.png);
+  background-position: 0% 0%;
+  background-size: 100.5% 101.2%
+}
+#examples .template-gallery a:hover:after {
   position: absolute;
   content: 'Просмотр дизайна \203A';
   bottom: -1.5em;
@@ -650,26 +668,7 @@ section#actions {
     opacity: 1;
   }
 }
-#examples .template-row > div > a > div {
-  background-color: #c8d5ff;
-  box-shadow: 2px 2px 8px -2px rgba(0,0,0,.52);
-  transition: box-shadow 225ms ease-in-out;
-  background-image: url(../img/vypusk-img/Grad-1-mini.jpg);
-  width: 170px;
-  border-radius: 0 3px 3px 0;
-  height: 170px
-}
-#examples .template-row a:hover > div {
-  box-shadow: 5px 5px 3px -1px rgba(0,0,0,.13), 2px 2px 8px -2px rgba(0,0,0,.52);
-}
-#examples .template-row > div > a > div > div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://indiprint.ru/static/site/photobooks/images/book-mask.png);
-  background-position: 0% 0%;
-  background-size: 100.5% 101.2%
-}
+
 #how-to .column-container {
   display: flex;
   flex-direction: row;
@@ -872,11 +871,12 @@ section#actions {
     margin: 0;
     margin-bottom: 18px
   }
-  #examples .template-row{
-    justify-content: center
+  #examples .template-gallery > div {
+    flex: 1 0 calc(33% - 30px);
+    margin-bottom: 40px
   }
-  #examples .template-row > div:last-child {
-    display: none
+  #examples .template-gallery > div:not(:nth-child(3n)) {
+    margin-right: 30px
   }
   #pros .inner-container > div {
     width: 95%
@@ -996,6 +996,23 @@ section#actions {
   #grad-calc .tab-wrapper {
     padding: 7px
   }
+  #examples .template-gallery > div {
+    flex: 1 0 calc(50% - 30px);
+    margin-bottom: 40px
+  }
+  #examples .template-gallery > div:nth-child(1n) {
+    margin-right: 0
+  }
+  #examples .template-gallery > div:not(:nth-child(even)) {
+    margin-right: 20px
+  }
+  #examples h3 {
+    align-self: center;
+    text-align: center
+  }
+  #examples .template-gallery > div {
+    justify-content: center;
+  }
 }
 @media (max-width: 550px) {
   .owl-carousel.review-carousel {
@@ -1034,5 +1051,10 @@ section#actions {
   }
   #how-to .column-container > div {
     padding: 30px 20px 35px;
+  }
+}
+@media (max-width: 410px) {
+  #examples .template-gallery > div:nth-child(1n) {
+    margin-right: 0
   }
 }
