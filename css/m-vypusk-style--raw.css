@@ -647,7 +647,7 @@ section#actions {
 }
 #examples .template-gallery a:hover:after {
   position: absolute;
-  content: 'Просмотр дизайна \203A';
+  content: 'Просмотр дизайна \0023F5';
   bottom: -1.5em;
   line-height: 1em;
   display: flex;
