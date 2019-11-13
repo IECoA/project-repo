@@ -546,23 +546,23 @@ section#actions {
   flex: 1 1 0;
   text-align: center;
   padding: 6px 10px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #9797979c;
   border-radius: 4px;
-  background-color: #ffffff8a;
+  background-color: #ffffffc2;
   color: #333;
   pointer-events: auto;
 }
 .banner--tabs-wrapper ul > li.active {
-  background-color: #f2f2f2cf;
+  background-color: #f2f2f2e0;
   box-shadow: 0 3px 6px #38404aa8;
 }
 .banner--tabs-wrapper ul > li:hover:not(.active) {
-  background: #ffffff4d;
+  background: #ffffffa3;
   border-color: #797979;
   box-shadow: 2px 2px 0px 1px #00000033;
   cursor: pointer
