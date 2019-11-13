@@ -432,6 +432,7 @@ section#actions {
 #intro > div.inner-container .banner--tabs-wrapper {
   position: absolute;
   bottom: 18px;
+  align-self: center
 }
 #intro .banner--content-wrapper {
   align-self: flex-start;
@@ -509,6 +510,9 @@ section#actions {
 #reviews .review__container .review__text {
   max-height: 190px
 }
+#how-to .inner-container > ul {
+  display: none
+}
 .banner--tabs-wrapper {
 
 }
@@ -545,7 +549,7 @@ section#actions {
   background-color: lightgray
 }
 .banner--tabs-wrapper ul > li:hover {
-  background-color: #efefef;
+  background-color: #f5f5f5;
   border-color: #797979;
   -webkit-box-shadow: 0 3px 10px #0000001a;
   box-shadow: 0 3px 10px #0000001a;
@@ -558,6 +562,7 @@ section#actions {
 #grad-calc > div:first-of-type {
   max-width: 490px;
   align-self: start;
+  margin: 0 30px 0 0
 }
 #grad-calc > div:last-child {
   max-width: 560px;
@@ -592,7 +597,8 @@ section#actions {
   flex-flow: wrap;
   width: 100%
 }
-#examples .template-row > div {
+#examples .template-row > div:not(:last-child) {
+  margin: 0 30px 30px 0
 }
 #examples .template-row a {
   position: relative;
@@ -663,12 +669,6 @@ section#actions {
 }
 #how-to .column-container > div .m-button {
 
-}
-#how-to .column-container > div:hover {
-  background-color: #efefef;
-  box-shadow: 0 3px 6px #0000002e;
-  border: 1px solid #00000008;
-  border-radius: 10px
 }
 #how-to .column-container > div ol {
   list-style: none;
@@ -819,12 +819,112 @@ section#actions {
 
 }
 
-
-@media screen and (max-width: 520px) {
-  #examples .template-row {
-    flex-wrap: wrap
+@media (min-width: 992px) {
+  #how-to .column-container > div:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 3px 6px #0000002e;
+    border: 1px solid #00000008;
+    border-radius: 10px
+  }
+}
+@media (max-width: 991px) {
+  .inner-container {
+    padding-left: 25px;
+    padding-right: 25px
   }
   .fl.column-fw-se {
     flex-flow: wrap;
+  }
+  #grad-calc > div:first-of-type {
+    max-width: 560px;
+    margin-bottom: 18px
+  }
+  #examples .template-row{
+    justify-content: center
+  }
+  #examples .template-row > div:last-child {
+    display: none
+  }
+  #pros .inner-container > div {
+    width: 95%
+  }
+}
+@media (max-width: 767px) {
+  .inner-container {
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  #examples .template-row {
+    flex-wrap: wrap
+  }
+  #actions > div.inner-container > div {
+    flex-direction: column;
+    min-width: 300px
+  }
+  #grad-calc > div:first-of-type {
+    max-width: 100%;
+    margin-bottom: 18px
+  }
+  #pros .inner-container > div {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 15px
+  }
+  #pros div.flex--sw-column > div {
+    padding: 0
+  }
+  #pros div.flex--sw-column > div:not(:last-of-type) {
+    margin-bottom: 33px
+  }
+  #pros .inner-container > div h4 {
+    margin-top: 8px
+  }
+  #how-to .inner-container > ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0
+  }
+  #how-to .inner-container > ul li {
+    color: #38404a;
+    font-size: 20px;
+    font-weight: 700;
+    width:100%;
+    text-align: center;
+    padding: 10px 15px;
+    z-index: 500;
+    border: 1px solid transparent
+  }
+  #how-to .inner-container > ul li.active {
+    background-color: #f5f5f5;
+    border: 1px solid #0000000f;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+  }
+  #how-to #howto-panels > div:not(.active) {
+    display: none
+  }
+  #how-to .column-container > div {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0 0 10px 10px;
+    background-color: #f5f5f5;
+    margin-top: -1px;
+    border: 1px solid #0000000f;
+  }
+  #how-to h3 {
+    display: none
+  }
+}
+@media (max-width: 479px) {
+  #how-to .inner-container > ul li {
+    font-size: 18px;
+    padding: 7px 10px;
+    letter-spacing: -0.02em
+  }
+  .owl-carousel.review-carousel {
+    max-width: 100%
   }
 }

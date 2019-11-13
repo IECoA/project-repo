@@ -110,15 +110,18 @@ function tabReset() {
 // Vypusk JS
 $(document).ready(function(){
   $(".review-carousel").owlCarousel({
-  margin:20,
-  nav:true,
+  nav:false,
   mouseDrag: false,
   navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
   //navContainer: '.custom-nav',
   responsive:{
-    300:{
+    250:{
         items:1,
         loop:true
+    },
+    480:{
+        nav:true,
+        margin:20
     },
     1030:{
         items:2,
@@ -153,7 +156,7 @@ document.getElementById('type-tab').onclick = function (event)   {
     var target = event.target;
     var targetParent = target.parentNode;
     if (targetParent.className == 'tab') {
-       for (var i=0; i<radioTab.length; i++) {
+       for (var i = 0; i < radioTab.length; i++) {
            if (targetParent == radioTab[i]) {
                showTabsContent(i);
                break;
@@ -174,8 +177,26 @@ document.getElementById('bs').onclick = function (bsSwitcher) {
   var bTargetID = bTarget.id;
   banner.className = 'banner ' + bTargetID;
 
-  for (var i=0; i<bannerTabs.length; i++) {
+  for (var i = 0; i < bannerTabs.length; i++) {
     bannerTabs[i].classList.remove("active");
   }
   bTarget.className = 'bs-tabs active';
+}
+
+const howtoTabLinks = document.querySelectorAll("#howto-tabs li");
+const howtoTabPanels = document.querySelectorAll("#howto-panels div");
+document.getElementById('howto-tabs').onclick = function () {
+  var tTarget = event.target;
+  var activeTabID;
+  for (var i = 0; i < howtoTabLinks.length; i++) {
+    howtoTabLinks[i].classList.remove("active");
+    howtoTabPanels[i].classList.remove("active");
+  }
+  tTarget.className = 'active';
+  for (var i = 0; i < howtoTabLinks.length; i++) {
+    if (howtoTabLinks[i].classList.contains('active')) {
+      activeTabID = i;
+      howtoTabPanels[i].className = 'active';
+    }
+  }
 }
