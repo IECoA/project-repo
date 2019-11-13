@@ -417,17 +417,18 @@ blockquote::-webkit-scrollbar-thumb {
   background-image: url(../img/vypusk-img/New-header-event.jpg);
 }
 #actions .action-icon {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
   height: 100px;
   width: 100px;
   flex-shrink: 0
 }
 #action-self .action-icon {
-  background-image: url(../img/vypusk-icon/1-Designer.png);
+  background-image: url(../img/vypusk-icon/1-DIY.png);
 }
 #action-design .action-icon {
-  background-image: url(../img/vypusk-icon/1-Designer2.png);
+  background-image: url(../img/vypusk-icon/1-Designer.png);
 }
 section#actions {
   border-bottom: 1px solid #e4e4e4
@@ -1003,9 +1004,13 @@ section#actions {
 }
 @media (max-width: 479px) {
   #how-to .inner-container > ul li {
-    font-size: 18px;
+    font-size: 17px;
     padding: 7px 10px;
     letter-spacing: -0.02em
+  }
+  #actions .action-icon {
+    height: 80px;
+    width: 80px;
   }
   .review__container {
     padding: 27px 7px 27px 20px;
