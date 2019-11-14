@@ -121,7 +121,7 @@ $(document).ready(function(){
         nav:false
     },
     550:{
-        nav:true,
+        nav:false,
         items:1,
         margin:20
     },
