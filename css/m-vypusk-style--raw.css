@@ -182,27 +182,14 @@ img {
   flex-direction: row;
 }
 .p-la .gallery {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: auto;
-  width: 100%;
-}
-.gallery.no-wrap {
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
+  flex-direction: row;
   flex-wrap: nowrap;
-  overflow: visible;
+  width: 100%;
+  overflow: auto
 }
-.gallery.wrap {
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.p-la .gallery a {
+  flex: 1 1 0
 }
 .atn-box {
   padding: 20px 22px;
@@ -501,6 +488,7 @@ section#actions {
 #pros .inner-container > div p {
   color: #696969;
   font-size: 13px;
+  font-weight: 300;
   text-align: center;
   letter-spacing: -.15px;
 }
@@ -957,7 +945,7 @@ section#actions {
     padding: 0
   }
   #pros div.flex--sw-column > div:not(:last-of-type) {
-    margin-bottom: 33px
+    margin-bottom: 48px
   }
   #pros .inner-container > div h4 {
     margin-top: 8px
@@ -1119,6 +1107,12 @@ section#actions {
   }
   #how-to .column-container > div {
     padding: 30px 20px 35px;
+  }
+  #pros .inner-container > div {
+    padding: 0
+  }
+  #pros .inner-container > div h4 {
+    max-width: 10em
   }
 }
 @media (max-width: 410px) {

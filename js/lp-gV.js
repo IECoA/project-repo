@@ -178,12 +178,13 @@ document.getElementById('bs').onclick = function (bsSwitcher) {
   var bClass = banner.classList.value;
   var bTarget = event.target;
   var bTargetID = bTarget.id;
-  banner.className = 'banner ' + bTargetID;
-
-  for (var i = 0; i < bannerTabs.length; i++) {
-    bannerTabs[i].classList.remove("active");
+  if (bTarget.classList.contains('bs-tabs')) {
+    for (var i = 0; i < bannerTabs.length; i++) {
+      bannerTabs[i].classList.remove("active");
+    }
+    banner.className = 'banner ' + bTargetID;
+    bTarget.className = 'bs-tabs active';
   }
-  bTarget.className = 'bs-tabs active';
 }
 
 const howtoTabLinks = document.querySelectorAll("#howto-tabs li");

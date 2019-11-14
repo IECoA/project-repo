@@ -467,7 +467,7 @@ textarea#msg {
 @media screen and (max-width: 560px) {
   .m-form.picker {
     margin: 0;
-    padding: 24px 12px;
+    padding: 34px 12px 24px;
   }
   .m-form.picker h1, .m-form.picker h2, .m-form.picker h3, .m-form.picker h4, .m-form.picker h5, .m-form.picker h6 {
     font-size: 14px
