@@ -860,8 +860,8 @@ section#actions {
 }
 @media (max-width: 991px) {
   #intro.banner {
-    height: 570px;
-    background-position: 50% 50%;
+    height: 580px;
+    background-position: 50% 50%
   }
   .inner-container {
     padding-left: 25px;
@@ -1067,6 +1067,7 @@ section#actions {
     align-items: center;
     justify-content: flex-end;
     text-align: center;
+    width: 100%;
     margin: 0;
     padding: 0 15px 30px
   }
