@@ -539,10 +539,11 @@ section#actions {
   padding: 0;
   margin: 0;
   pointer-events: none;
-  user-select: none
-
+  user-select: none;
+  position: relative
 }
 .banner--tabs-wrapper ul > li {
+  position: relative;
   flex: 1 1 0;
   text-align: center;
   padding: 6px 10px;
@@ -560,6 +561,8 @@ section#actions {
 .banner--tabs-wrapper ul > li.active {
   background-color: #f2f2f2e0;
   box-shadow: 0 3px 6px #38404aa8;
+  z-index: 2;
+  top: -7px
 }
 .banner--tabs-wrapper ul > li:hover:not(.active) {
   background: #ffffffa3;
@@ -1093,11 +1096,15 @@ section#actions {
     overflow: auto;
     user-select: auto;
     pointer-events: auto;
+    padding-bottom: 12px
   }
   .banner--tabs-wrapper ul > li {
     flex: 1 0 50%;
     flex: 1 0 30%;
     border-radius: 0
+  }
+  .banner--tabs-wrapper ul > li.active {
+    top: 6px
   }
   .banner--tabs-wrapper ul > li:not(:last-of-type) {
     border-right: none;
