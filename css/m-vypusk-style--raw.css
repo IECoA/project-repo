@@ -82,8 +82,7 @@ img {
   margin-bottom: 3px;
   color: #38404a;
   font-size: 18px;
-  line-height: 22px;
-  font-weight: 400;
+  font-weight: 400
 }
 .p-la h1 {
   margin-top: 0;
@@ -245,6 +244,9 @@ img {
   background-position: center;
   background-size: auto 32px;
 }
+.review__author .review__avatar.male {
+background-image:url(https://indiprint.ru/static/site/rewievs/img/male-n.svg)
+}
 .review__author .review__person-data {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -269,7 +271,7 @@ img {
   font-size: 13px;
   white-space: pre-line;
   line-height: 1.7em;
-  margin: 22px 0 0 0;
+  margin: 22px 0;
   overflow-x: hidden;
   border-left: 5px solid #e3e3e3;
   padding: 5px 20px;
@@ -292,7 +294,7 @@ blockquote::-webkit-scrollbar-thumb {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 25px 0;
+  margin: 0 0 22px 0;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
@@ -310,6 +312,10 @@ blockquote::-webkit-scrollbar-thumb {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-end
+}
+.review__container .review__content {
+  flex-grow: 1
 }
 .review__add-info .review__stars-holder {
   margin-left: auto;
@@ -336,7 +342,11 @@ blockquote::-webkit-scrollbar-thumb {
   position: relative;
   max-width: 95%;
 }
+.owl-carousel .owl-stage {
+    display: flex;
+}
 .owl-carousel.review-carousel div.review__wrapper {
+  height: 100%;
   padding: 16px 6px 6px 5px
 }
 .review-carousel.owl-theme .owl-nav {
@@ -346,8 +356,8 @@ blockquote::-webkit-scrollbar-thumb {
   margin-top: 0;
   top: 16px;
   width: 100%;
-  width: calc(100% + 100px);
-  left: -50px;
+  width: calc(100% + 84px);
+  left: -42px;
   height: calc(100% - 53px);
   pointer-events: none
 }
@@ -373,7 +383,10 @@ blockquote::-webkit-scrollbar-thumb {
   outline: none
 }
 .owl-theme.review-carousel .owl-nav [class*='owl-']:hover {
-  background: #f1f1f1;
+  background: none
+}
+.owl-theme.review-carousel .owl-nav [class*='owl-']:hover.owl-prev:before, .owl-theme.review-carousel .owl-nav [class*='owl-']:hover.owl-next:before {
+  filter: brightness(0.5)
 }
 .review-carousel .owl-dots {
   margin-top: 12px;
@@ -477,7 +490,7 @@ section#actions {
   margin: 25px 0
 }
 #pros .inner-container > div h4 {
-  max-width: 12.5em;
+  max-width: 13.5em;
   color: #363636;
   font-size: 22px;
   font-weight: 700;
@@ -501,16 +514,17 @@ section#actions {
   padding: 0 10px
 }
 #reviews .review__container {
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   user-select: none;
 }
-#reviews .review__container > div {
-  flex: 1 1 0
-}
 #reviews .review__container .review__text {
   max-height: 190px
+}
+#reviews .review__container .review__text:last-child {
+  flex-grow: 1;
+  max-height: 285px
 }
 #how-to .inner-container > ul {
   display: none
@@ -732,8 +746,31 @@ section#actions {
   background-color: #2F96D9;
   border-radius: 50%;
 }
-.picker h4 {
-  display: flex;
+#info .inner-container {
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start
+}
+#info .inner-container p {
+  text-align: left;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 14px
+}
+#info .inner-container h2 {
+  margin-left: auto;
+  margin-right: auto
+}
+#info .inner-container h3 {
+  margin: 10px 0
+}
+#info .inner-container > div {
+  flex: 1 0 50%;
+  padding: 0 20px 0 0
 }
 .picker h4 span {
   margin-left: auto;
@@ -989,8 +1026,8 @@ section#actions {
     display: none
   }
   .review-carousel.owl-theme .owl-nav {
-      width: calc(100% + 70px);
-      left: -35px
+    width: calc(100% + 70px);
+    left: -35px
   }
   .review__container {
     padding: 27px 20px;
@@ -1020,7 +1057,10 @@ section#actions {
     text-align: center
   }
   #examples .template-gallery > div {
-    justify-content: center;
+    justify-content: center
+  }
+  #info .inner-container {
+    flex-direction: column
   }
 }
 @media (max-width: 550px) {
@@ -1052,7 +1092,8 @@ section#actions {
     background-image: url(../img/vypusk-img/header-m_event.jpg)
   }
   .m-button {
-    width: 100%
+    width: 100%;
+    text-align: center
   }
   #intro > div.inner-container {
     padding-bottom: 0

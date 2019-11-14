@@ -204,3 +204,38 @@ document.getElementById('howto-tabs').onclick = function () {
     }
   }
 }
+
+// lightGallery Call
+lightGallery(document.getElementById("photo-gallery"),{
+  thumbnail:!0,
+  counter:!1,
+  download:!1,
+  toggleThumb:!1,
+  mode:"lg-fade",
+  hideBarsDelay:3e4,
+  thumbWidth:130,
+  thumbMargin:10,
+  thumbContHeight:130
+});
+lightGallery(document.getElementById("review-gallery-1"),{
+  thumbnail:!0,
+  counter:!1,
+  download:!1,
+  toggleThumb:!1,
+  mode:"lg-fade",
+  hideBarsDelay:3e4,
+  thumbWidth:130,
+  thumbMargin:10,
+  thumbContHeight:130
+});
+lightGallery(document.getElementById("review-gallery-2"),{
+  thumbnail:!0,
+  counter:!1,
+  download:!1,
+  toggleThumb:!1,
+  mode:"lg-fade",
+  hideBarsDelay:3e4,
+  thumbWidth:130,
+  thumbMargin:10,
+  thumbContHeight:130
+});

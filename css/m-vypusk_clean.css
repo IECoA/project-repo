@@ -16,6 +16,7 @@
 }
 .picker h1, .picker h2, .picker h3, .picker h4, .picker h5, .picker h6 {
   text-align: left;
+  display: flex;
   font-size: 16px;
   font-weight: 600;
   margin: 0 0 7px 0
