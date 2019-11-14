@@ -438,7 +438,8 @@ section#actions {
   padding: 15px 0
 }
 #intro > div.inner-container .banner--tabs-wrapper {
-  align-self: center
+  align-self: center;
+  max-width: 100%
 }
 #intro .banner--content-wrapper {
   align-self: flex-start;
@@ -1062,6 +1063,9 @@ section#actions {
   .p-la .banner.bs4 {
     background-image: url(../img/vypusk-img/header-m_event.jpg)
   }
+  .m-button {
+    width: 100%
+  }
   #intro > div.inner-container {
     padding-bottom: 0
   }
@@ -1073,6 +1077,9 @@ section#actions {
     width: 100%;
     margin: 0;
     padding: 0 15px 30px
+  }
+  #intro .banner--content-wrapper h1 {
+    letter-spacing: -0.04em
   }
   #intro .banner--content-wrapper p {
     max-width: none

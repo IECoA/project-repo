@@ -127,6 +127,7 @@ $(document).ready(function(){
     },
     1030:{
         items:2,
+        nav:true,
         margin:42,
         loop:true
     }
