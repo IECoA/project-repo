@@ -1215,6 +1215,12 @@ section#actions {
     max-width: 10em
   }
 }
+@media (max-width: 410px) {
+  #examples .template-gallery > div:nth-child(1n) {
+    margin-right: 0
+  }
+}
+/*
 @media (max-width: 479px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .p-la #intro.banner.bs1 {
     background-image: url(../img/vypusk-img/h_det-2x480.jpg);
@@ -1229,8 +1235,4 @@ section#actions {
     background-image: url(../img/vypusk-img/h_event-2x480.jpg);
   }
 }
-@media (max-width: 410px) {
-  #examples .template-gallery > div:nth-child(1n) {
-    margin-right: 0
-  }
-}
+*/
