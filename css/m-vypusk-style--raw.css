@@ -4,6 +4,9 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+*:focus {
+  outline: 0
+}
 body {
   margin: 0;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif
@@ -185,10 +188,14 @@ img {
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
-  overflow: auto
+  overflow-x: auto;
+  overflow-y: hidden
 }
 .p-la .gallery a {
   flex: 1 1 0
+}
+.p-la .gallery a:not(:last-child) {
+  margin-right: 20px
 }
 .atn-box {
   padding: 20px 22px;
@@ -393,21 +400,55 @@ blockquote::-webkit-scrollbar-thumb {
 }
 
 /* Page level CSS */
-.p-la .banner.bs1 {
+.p-la #intro.banner.bs1 {
   background-color: #8591cb;
-  background-image: url(../img/vypusk-img/New-header-det.jpg);
+  background-image: url(../img/vypusk-img/h_det-1920.jpg);
+  background-image: -webkit-image-set(url(../img/vypusk-img/h_det-1920.webp)1x)
 }
-.p-la .banner.bs2 {
+.p-la #intro.banner.bs2 {
   background-color: #2e303f;
-  background-image: url(../img/vypusk-img/New-header_9-11.jpg);
+  background-image: url(../img/vypusk-img/h_9-11-1920.jpg);
+  background-image: -webkit-image-set(url(../img/vypusk-img/h_9-11-1920.webp)1x)
 }
-.p-la .banner.bs3 {
+.p-la #intro.banner.bs3 {
   background-color: #a0a3a8;
-  background-image: url(../img/vypusk-img/New-header-grad.jpg);
+  background-image: url(../img/vypusk-img/h_grad-1920.jpg);
+  background-image: -webkit-image-set(url(../img/vypusk-img/h_grad-1920.webp)1x)
 }
-.p-la .banner.bs4 {
+.p-la #intro.banner.bs4 {
   background-color: #839885;
-  background-image: url(../img/vypusk-img/New-header-event.jpg);
+  background-image: url(../img/vypusk-img/h_event-1920.jpg);
+  background-image: -webkit-image-set(url(../img/vypusk-img/h_event-1920.webp)1x)
+}
+div#t-gallery-1 > a > div {
+  background-image: url(../img/vypusk-img/template-1.jpg);
+}
+div#t-gallery-2 > a > div {
+  background-image: url(../img/vypusk-img/template-2.jpg);
+}
+div#t-gallery-3 > a > div {
+  background-image: url(../img/vypusk-img/template-3.jpg);
+}
+div#t-gallery-4 > a > div {
+  background-image: url(../img/vypusk-img/template-4.jpg);
+}
+div#t-gallery-5 > a > div {
+  background-image: url(../img/vypusk-img/template-5.jpg);
+}
+div#t-gallery-6 > a > div {
+  background-image: url(../img/vypusk-img/template-6.jpg);
+}
+div#t-gallery-7 > a > div {
+  background-image: url(../img/vypusk-img/template-7.jpg);
+}
+div#t-gallery-8 > a > div {
+  background-image: url(../img/vypusk-img/template-8.jpg);
+}
+div#t-gallery-9 > a > div {
+  background-image: url(../img/vypusk-img/template-9.jpg);
+}
+div#t-gallery-10 > a > div {
+  background-image: url(../img/vypusk-img/template-10.jpg);
 }
 #intro.banner {
   height: 640px;
@@ -635,7 +676,6 @@ section#actions {
 #examples .template-gallery > div > a > div {
   background-color: #c8d5ff;
   box-shadow: 2px 2px 8px -2px rgba(0,0,0,.52);
-  background-image: url(../img/vypusk-img/Grad-1-mini.jpg);
   width: 170px;
   border-radius: 0 3px 3px 0;
   height: 170px
@@ -872,13 +912,24 @@ section#actions {
   display: block
 }
 
-/* Temprory */
-.gallery__img-placeholder {
-  height: 200px;
-  width: 200px;
-  background-color: gray
+@media (min-width: 1921px) {
+  .p-la #intro.banner.bs1 {
+    background-image: url(../img/vypusk-img/h_det-2560.jpg);
+    background-image: -webkit-image-set(url(../img/vypusk-img/h_det-2560.webp)1x)
+  }
+  .p-la #intro.banner.bs2 {
+    background-image: url(../img/vypusk-img/h_9-11-2560.jpg);
+    background-image: -webkit-image-set(url(../img/vypusk-img/h_9-11-2560.webp)1x)
+  }
+  .p-la #intro.banner.bs3 {
+    background-image: url(../img/vypusk-img/h_grad-2560.jpg);
+    background-image: -webkit-image-set(url(../img/vypusk-img/h_grad-2560.webp)1x)
+  }
+  .p-la #intro.banner.bs4 {
+    background-image: url(../img/vypusk-img/h_event-2560.jpg);
+    background-image: -webkit-image-set(url(../img/vypusk-img/h_event-2560.webp)1x)
+  }
 }
-
 @media (min-width: 992px) {
   #how-to .column-container > div:hover {
     background-color: #f5f5f5;
@@ -922,6 +973,14 @@ section#actions {
   .inner-container {
     padding-left: 15px;
     padding-right: 15px
+  }
+  .p-la .gallery a {
+    flex: 1 0 40%;
+    min-width: 150px;
+    max-width: 220px
+  }
+  .p-la .gallery a:not(:last-child) {
+    margin-right: 25px
   }
   #intro .banner--content-wrapper {
     margin-left: 5vw;
@@ -1079,17 +1138,17 @@ section#actions {
   }
 }
 @media (max-width: 479px) {
-  .p-la .banner.bs1 {
-    background-image: url(../img/vypusk-img/header-m_det.jpg)
+  .p-la #intro.banner.bs1 {
+    background-image: url(../img/vypusk-img/h_det-480.jpg);
   }
-  .p-la .banner.bs2 {
-    background-image: url(../img/vypusk-img/header-m_9-11.jpg)
+  .p-la #intro.banner.bs2 {
+    background-image: url(../img/vypusk-img/h_9-11-480.jpg);
   }
-  .p-la .banner.bs3 {
-    background-image: url(../img/vypusk-img/header-m_grad.jpg)
+  .p-la #intro.banner.bs3 {
+    background-image: url(../img/vypusk-img/h_grad-480.jpg);
   }
-  .p-la .banner.bs4 {
-    background-image: url(../img/vypusk-img/header-m_event.jpg)
+  .p-la #intro.banner.bs4 {
+    background-image: url(../img/vypusk-img/h_event-480.jpg);
   }
   .m-button {
     width: 100%;
@@ -1154,6 +1213,20 @@ section#actions {
   }
   #pros .inner-container > div h4 {
     max-width: 10em
+  }
+}
+@media (max-width: 479px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .p-la #intro.banner.bs1 {
+    background-image: url(../img/vypusk-img/h_det-2x480.jpg);
+  }
+  .p-la #intro.banner.bs2 {
+    background-image: url(../img/vypusk-img/h_9-11-2x480.jpg);
+  }
+  .p-la #intro.banner.bs3 {
+    background-image: url(../img/vypusk-img/h_grad-2x480.jpg);
+  }
+  .p-la #intro.banner.bs4 {
+    background-image: url(../img/vypusk-img/h_event-2x480.jpg);
   }
 }
 @media (max-width: 410px) {

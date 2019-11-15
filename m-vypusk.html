@@ -26,7 +26,7 @@
         <div class="banner--content-wrapper">
           <h1>Печать выпускных альбомов</h1>
           <p>Печать выпускных по выгодным ценам. <br>Закажите дизайн или создайте онлайн</p>
-          <button class="m-button">заказать выпускной</button>
+          <a href="#calc" class="m-button">заказать выпускной</a>
         </div>
         <div class="banner--tabs-wrapper">
           <ul id="bs">
@@ -45,7 +45,7 @@
           <div class="content-wrapper">
             <h3>Создать выпускные самостоятельно</h3>
             <p>Создать выпускные для печати по шаблону или «с нуля» в бесплатном онлайн-редакторе</p>
-            <a class="m-button t-button">перейти к шаблонам</a>
+            <a href="/photobooks/vypusk-fotoknigi/" class="m-button t-button">перейти к шаблонам</a>
           </div>
         </div>
         <div id="action-design">
@@ -53,7 +53,7 @@
           <div class="content-wrapper">
             <h3>Заказ дизайна выпускных</h3>
             <p>Заказать разработку дизайна для печати выпускных у дизайнера</p>
-            <a class="m-button t-button">Заказать дизайн</a>
+            <a class="m-button t-button modal-link" data-featherlight="#vypusk-form-zapros">Заказать дизайн</a>
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@
                 <p>Оставьте заявку и получите предложение на печать выпускных</p>
               </div>
             </div>
-            <button class="m-button" data-featherlight="#m-form">заказать выпускной</button>
+            <button class="m-button modal-link" data-featherlight="#vypusk-form-zapros">заказать выпускной</button>
           </div>
         </div>
       </div>
@@ -170,41 +170,64 @@
         <p>Готовые шаблоны в различных стилях и разработка дизайнов на заказ. <br>Создайте выпускные по бесплатным шаблонам в онлайн-редакторе.</p>
         <h3>Галерея готовых выпускных</h3>
         <div class="gallery" id="photo-gallery">
-          <div class="gallery__img-placeholder"></div>
-          <div class="gallery__img-placeholder"></div>
-          <div class="gallery__img-placeholder"></div>
-          <div class="gallery__img-placeholder"></div>
-          <div class="gallery__img-placeholder"></div>
-          <a href="#">
+          <a href="img\vypusk-img\g1-corr.jpg">
             <picture>
-              <source src="" type="image/webp">
-              <source src="" type="image/jpeg">
-              <img src="" alt="">
+              <source srcset="img/vypusk-img/g1-mini.webp" type="image/webp">
+              <source srcset="img/vypusk-img/g1-corr.jpg" type="image/jpeg">
+              <img src="img/vypusk-img/g1-corr.jpg" alt="Выпускные альбомы для детского сада, детский выпускные">
             </picture>
           </a>
-          <a href="#">
+          <a href="img\vypusk-img\g2-corr.jpg">
             <picture>
-              <source src="" type="image/webp">
-              <source src="" type="image/jpeg">
-              <img src="" alt="">
+              <source srcset="img/vypusk-img/g2-mini.webp" type="image/webp">
+              <source srcset="img/vypusk-img/g2-mini.jpg" type="image/jpeg">
+              <img src="img/vypusk-img/g2-mini.jpg" alt="Школьные выпускные для 9, 11 классов с индивидуальным дизайном">
+            </picture>
+          </a>
+          <a href="img\vypusk-img\g3-corr.jpg">
+            <picture>
+              <source srcset="img/vypusk-img/g3-mini.webp" type="image/webp">
+              <source srcset="img/vypusk-img/g3-corr.jpg" type="image/jpeg">
+              <img src="img/vypusk-img/g3-corr.jpg" alt="Детские выпускные альбомы, страницы альбомов">
+            </picture>
+          </a>
+          <a href="img\vypusk-img\g4-corr.jpg">
+            <picture>
+              <source srcset="img/vypusk-img/g4-mini.webp" type="image/webp">
+              <source srcset="img/vypusk-img/g4-corr.jpg" type="image/jpeg">
+              <img src="img/vypusk-img/g4-corr.jpg" alt="Выпускные фотокниги – корешок, раскрытие страниц">
+            </picture>
+          </a>
+          <a href="img\vypusk-img\g5-corr.jpg">
+            <picture>
+              <source srcset="img/vypusk-img/g5-mini.webp" type="image/webp">
+              <source srcset="img/vypusk-img/g5-corr.jpg" type="image/jpeg">
+              <img src="img/vypusk-img/g5-corr.jpg" alt="Детские альбомы для выпускного, дизайн страниц">
+            </picture>
+          </a>
+          <a href="img\vypusk-img\g6-corr.jpg">
+            <picture>
+              <source srcset="img/vypusk-img/g6-mini.webp" type="image/webp">
+              <source srcset="img/vypusk-img/g6-corr.jpg" type="image/jpeg">
+              <img src="img/vypusk-img/g6-corr.jpg" alt="Выпускной для школы, 9 классы – разработка дизайна">
             </picture>
           </a>
         </div>
-        <button class="m-button">Заказать дизайн</button>
+        <button class="m-button modal-link" data-featherlight="#vypusk-form-zapros">Заказать дизайн</button>
         <h3>Примеры бесплатных дизайнов</h3>
         <div class="template-gallery">
-          <div id="t-gallery-1"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-2"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-3"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-4"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-5"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-6"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-7"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-8"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-9"><a href=""><div><div></div></div></a></div>
-          <div id="t-gallery-10"><a href=""><div><div></div></div></a></div>
+          <div id="t-gallery-4"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=127"><div><div></div></div></a></div>
+          <div id="t-gallery-10"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=443"><div><div></div></div></a></div>
+          <div id="t-gallery-6"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=437"><div><div></div></div></a></div>
+          <div id="t-gallery-7"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=447"><div><div></div></div></a></div>
+          <div id="t-gallery-3"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=455"><div><div></div></div></a></div>
+          <div id="t-gallery-2"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=130"><div><div></div></div></a></div>
+          <div id="t-gallery-5"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=111"><div><div></div></div></a></div>
+          <div id="t-gallery-9"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=129"><div><div></div></div></a></div>
+          <div id="t-gallery-8"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=446"><div><div></div></div></a></div>
+          <div id="t-gallery-1"><a href="/photobooks/vypusk-fotoknigi/?type=1&format=1&design=146"><div><div></div></div></a></div>
         </div>
-        <button class="m-button">посмотреть все дизайны</button>
+        <a href="/photobooks/vypusk-fotoknigi/" class="m-button">посмотреть все дизайны</a>
       </div>
     </section>
     <section id="how-to" class="inner-shadow">
@@ -228,7 +251,7 @@
                 <p>Когда альбомы будут готовы, останется только отправить их в печать. Для пересчета цены надо будет ввести специальный код, который вы можете получить на этой странице или написав нам на email.<br>Срок производства выпускных составляет около 4 рабочих дней.</p>
               </li>
             </ol>
-            <a href="#" class="m-button">создать альбом</a>
+            <a href="/photobooks/vypusk-fotoknigi/" class="m-button">создать альбом</a>
           </div>
           <div class="active">
             <h3>С помощью дизайнера</h3>
@@ -246,7 +269,7 @@
                 <p>Когда дизайн альбомов будут готовы, останется только отправить их в печать. <br>Срок производства выпускных составляет 4-5 рабочих дней.</p>
               </li>
             </ol>
-            <a href="#" class="m-button">оставить заявку</a>
+            <a class="m-button modal-link" data-featherlight="#vypusk-form-zapros">оставить заявку</a>
           </div>
         </div>
       </div>
@@ -528,21 +551,21 @@
       <div class="inner-container">
         <h2>Выпускные альбомы и фотокниги на заказ</h2>
         <p>
-          Компания Индипринт занимается печатью выпускных альбомов и фотокниг полиграфическим способом печати с доставкой в 905 городов России. <br>
+          Компания <a href="/">Индипринт</a> занимается печатью выпускных альбомов и фотокниг полиграфическим способом печати с доставкой в 905 городов России. <br>
           Создайте альбомы самостоятельно в бесплатном онлайн-редакторе или закажите разработку дизайна у дизайнера.
         </p>
         <p>
-          Выберите подходящий тип и формат фотокниги для детских и школьных выпускных; либо другого события.<br>
+          Выберите подходящий тип и формат <a href="/photobooks/">фотокниги</a> для детских и школьных выпускных; либо другого события.<br>
           Количество разворотов в книге зависит от дизайна и желаемой цены: минимальное количество – 6 страниц или 3 разворота; максимальное – 120 страниц или 60 разворотов.
         </p>
         <p>
           Сроки производства составляют 4-5 рабочих дней. <br>
-          Доставка в 905 городов по всей России: курьером до двери; 3213 пунктов выдачи в 905 городах; или Почтой России.
+          <a href="/dostavka/">Доставка</a> в 905 городов по всей России: курьером до двери; 3213 пунктов выдачи в 905 городах; или Почтой России.
         </p>
         <h3>Школьные альбомы для 4, 9, 11 классов</h3>
         <p>
           Классический вид школьных альбомов для старших классов – вертикальный A4 22x30 см.<br>
-          В формате A4 22x30 доступны фотокнига со страницами 170 г/м² или фотоальбом с плотными, почти картонными, – 500 г/м².<br>
+          В формате A4 22x30 доступны <a href="/photobooks/">фотокнига</a> со страницами 170 г/м² или фотоальбом с плотными, почти картонными, – 500 г/м².<br>
           Твёрдая обложка альбомов с глянцевой или бархатной ламинацией надежно защищает изделие от внешних воздействий.<br>
           Узнать стоимость альбомов можно в специальном калькуляторе.
         </p>
@@ -550,9 +573,9 @@
           <h3>Альбомы для детского сада,<br>детские выпускные цена</h3>
           <p>
             Цена на выпускные альбомы при заказе от 10 штук начинается с 750 руб.<br>
-            На нашем сайте вы можете самостоятельно создать детские выпускные альбомы или заказать создание дизайна.<br>
+            На нашем сайте вы можете самостоятельно создать детские <a href="/photobooks/vypusk-fotoknigi/">выпускные альбомы</a> или заказать создание дизайна.<br>
             На выбор представлены 3 вида книг – с тонкими или толстыми страницами – и 5 форматов.<br>
-            Популярные размеры детских альбомов – горизонтальные фотоальбомы 20×15 см и квадратные 20x20 см, сочетающие компактный формат и доступную цену.
+            Популярные размеры <a href="/photobooks/detskie-fotoknigi/">детских альбомов</a> – горизонтальные фотоальбомы 20×15 см и квадратные 20x20 см, сочетающие компактный формат и доступную цену.
           </p>
           <p>
             Твёрдая обложка с ламинацией надежно защитит альбом, позволяя рассматривать фотографии не только родителям, но и самим детям.
@@ -561,13 +584,13 @@
         <div>
           <h3>Печать альбомов для выпускных классов онлайн</h3>
           <p>
-            Напечатайте выпускные по собственному дизайну или закажите дизайн онлайн.
+            Напечатайте выпускные по собственному дизайну или <a href="#calc">закажите дизайн</a> онлайн.
             Печать и производство выпускных занимает 4-5 рабочих дней.
           </p>
           <p>
-            При создании выпускных самостоятельно воспользуйтесь бесплатными
+            При <a href="/photobooks/vypusk-fotoknigi/">создании выпускных</a> самостоятельно воспользуйтесь бесплатными
             готовыми шаблонами, либо создайте дизайн «с нуля».<br>
-            Бесплатный онлайн редакторе предоставляет полную свободу в
+            Бесплатный онлайн-редактор предоставляет полную свободу в
             редактировании макета: загружайте и расставляйте
             фотографии по готовым раскладкам; добавляйте и редактируйте текст; меняйте
             или удаляйте фоны; перемещайте и добавляйте страницы; убирайте лишние элементы.
@@ -577,7 +600,7 @@
     </section>
 
     <!-- Modal -->
-    <div class="m-form picker" id="m-form">
+    <div class="m-form picker" id="vypusk-form-zapros">
       <form action="" id="l-vypuskForm" data-parsley-validate>
         <div class="l-tab current">
           <h4>Тип выпускного: <span><a href="/photobooks/about/" target="_blank">Подробнее о типах</a></span></h4>
@@ -671,7 +694,7 @@
             </div>
           </div>
           <input type="submit" value="оставить заявку" class="m-button">
-          <button type="button" name="button" id="prevBtn" onclick="nextPrev(-1)" class="m-button">Назад</button>
+          <button type="button" name="button" id="prevBtn" class="m-button">Назад</button>
         </div>
       </form>
     </div>
@@ -679,14 +702,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script src="js/featherlight.min.js" charset="utf-8"></script>
-    <script>
-      $.extend($.featherlight.defaults, {
-        openSpeed: 250,
-        closeSpeed: 250,
-        persist: true,
-        variant: 'l-modal-form',
-      });
-    </script>
 
     <script src="js\lightgallery.min.js" charset="utf-8"></script>
     <script src="js\lg-thumbnail.min.js" charset="utf-8"></script>

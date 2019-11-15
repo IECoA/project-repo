@@ -11,109 +11,57 @@ function showPassword() {
 // Phone mask
 $('#phone').mask('+7 (000) 000-00-00');
 
-// jQuery Form Tabs + Validation
-if (window.matchMedia("(max-width: 560px)").matches) {
-$(function () {
-  var $sections = $('.l-tab');
-
-  function navigateTo(index) {
-    // Mark the current section with the class 'current'
-    $sections
-      .removeClass('current')
-      .eq(index)
-        .addClass('current');
-    // Show only the navigation buttons that make sense for the current section:
-    $('#prevBtn').toggle(index > 0);
-    var atTheEnd = index >= $sections.length - 1;
-    $('#nextBtn').toggle(!atTheEnd);
-    $('.m-button[type=submit]').toggle(atTheEnd);
-  }
-
-  function curIndex() {
-    // Return the current index by looking at which section has the class 'current'
-    return $sections.index($sections.filter('.current'));
-  }
-
-  // Previous button is easy, just go back
-  $('#prevBtn').click(function() {
-    navigateTo(curIndex() - 1);
-  });
-
-  // Next button goes forward iff current block validates
-  $('#nextBtn').click(function() {
-    $('#l-vypuskForm').parsley().whenValidate({
-      group: 'block-' + curIndex()
-    }).done(function() {
-      navigateTo(curIndex() + 1);
-    });
-  });
-
-  // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
-  $sections.each(function(index, section) {
-    $(section).find(':input').attr('data-parsley-group', 'block-' + index);
-  });
-  navigateTo(0); // Start at the beginning
+$.extend($.featherlight.defaults, {
+  openSpeed: 250,
+  closeSpeed: 250,
+  persist: false,
+  variant: 'l-modal-form',
 });
-}
-
-// Form Tabs
-
-/*
-
-//if (window.matchMedia("(max-width: 560px)").matches) {
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
-function showTab(n) {
-  // This function will display the specified tab of the form ...
-  var x = document.getElementsByClassName("l-tab");
-  x[n].style.display = "block";
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("l-tab");
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease t he current tab by 1:
-  currentTab = currentTab + n;
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, xt, i, valid = true;
-  x = document.getElementsByClassName("l-tab");
-  y = x[currentTab].getElementsByTagName("input");
-  xt = document.getElementById("amount-field");
-  // Value Checker
-  if (xt.value < 10) {
-    xt.className += " invalid";
-    valid = false;
-  }
-  return valid;
-}
-//}
-/*
-function tabReset() {
-  currentTab = 0;
-  var x = document.getElementsByClassName("l-tab");
-  x[0].style.display = "block";
-}
-*/
+$('.modal-link').featherlight($('#vypusk-form-zapros'), {persist: 'shared'});
 
 
 
-// Vypusk JS
+// lightGallery Call
+lightGallery(document.getElementById("photo-gallery"),{
+  thumbnail:!0,
+  counter:!1,
+  download:!1,
+  toggleThumb:!1,
+  mode:"lg-fade",
+  hideBarsDelay:3e4,
+  thumbWidth:130,
+  thumbMargin:10,
+  thumbContHeight:130
+});
+lightGallery(document.getElementById("review-gallery-1"),{
+  thumbnail:!0,
+  counter:!1,
+  download:!1,
+  toggleThumb:!1,
+  mode:"lg-fade",
+  hideBarsDelay:3e4,
+  thumbWidth:130,
+  thumbMargin:10,
+  thumbContHeight:130
+});
+lightGallery(document.getElementById("review-gallery-2"),{
+  thumbnail:!0,
+  counter:!1,
+  download:!1,
+  toggleThumb:!1,
+  mode:"lg-fade",
+  hideBarsDelay:3e4,
+  thumbWidth:130,
+  thumbMargin:10,
+  thumbContHeight:130
+});
+
+// Vypusk Reviews Carousel
 $(document).ready(function(){
   $(".review-carousel").owlCarousel({
   nav:true,
   mouseDrag: false,
   navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-  //navContainer: '.custom-nav',
   responsive:{
     250:{
         items:1,
@@ -135,7 +83,46 @@ $(document).ready(function(){
   });
 });
 
-// Tabs Self
+// jQuery Form Tabs + Validation
+if (window.matchMedia("(max-width: 560px)").matches) {
+$(function () {
+  var $sections = $('.l-tab');
+
+  function navigateTo(index) {
+    $sections
+      .removeClass('current')
+      .eq(index)
+        .addClass('current');
+    $('#prevBtn').toggle(index > 0);
+    var atTheEnd = index >= $sections.length - 1;
+    $('#nextBtn').toggle(!atTheEnd);
+    $('.m-button[type=submit]').toggle(atTheEnd);
+  }
+
+  function curIndex() {
+    return $sections.index($sections.filter('.current'));
+  }
+
+  $('#prevBtn').click(function() {
+    navigateTo(curIndex() - 1);
+  });
+
+  $('#nextBtn').click(function() {
+    $('#l-vypuskForm').parsley().whenValidate({
+      group: 'block-' + curIndex()
+    }).done(function() {
+      navigateTo(curIndex() + 1);
+    });
+  });
+
+  $sections.each(function(index, section) {
+    $(section).find(':input').attr('data-parsley-group', 'block-' + index);
+  });
+  navigateTo(0);
+});
+}
+
+// Vypusk Tabs
 var radioTab;
 var tabContent;
 var bannerTabs
@@ -205,37 +192,33 @@ document.getElementById('howto-tabs').onclick = function () {
   }
 }
 
-// lightGallery Call
-lightGallery(document.getElementById("photo-gallery"),{
-  thumbnail:!0,
-  counter:!1,
-  download:!1,
-  toggleThumb:!1,
-  mode:"lg-fade",
-  hideBarsDelay:3e4,
-  thumbWidth:130,
-  thumbMargin:10,
-  thumbContHeight:130
-});
-lightGallery(document.getElementById("review-gallery-1"),{
-  thumbnail:!0,
-  counter:!1,
-  download:!1,
-  toggleThumb:!1,
-  mode:"lg-fade",
-  hideBarsDelay:3e4,
-  thumbWidth:130,
-  thumbMargin:10,
-  thumbContHeight:130
-});
-lightGallery(document.getElementById("review-gallery-2"),{
-  thumbnail:!0,
-  counter:!1,
-  download:!1,
-  toggleThumb:!1,
-  mode:"lg-fade",
-  hideBarsDelay:3e4,
-  thumbWidth:130,
-  thumbMargin:10,
-  thumbContHeight:130
-});
+// Smooth Scroll
+// Select all links with hashes
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus();
+          };
+        });
+      }
+    }
+  });
