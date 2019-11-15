@@ -84,7 +84,16 @@
       </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/m-form.js" charset="utf-8"></script>
+    <script>
+      // Show Password Icon
+      function showPassword() {
+      var xB = document.getElementById("password");
+      if (xB.type === "password") {
+        xB.type = "text";
+      } else {
+        xB.type = "password";
+      }
+    </script>
     <script src="js\parsley.js" charset="utf-8"></script>
     <script src="js\ru.js" charset="utf-8"></script>
   </body>
