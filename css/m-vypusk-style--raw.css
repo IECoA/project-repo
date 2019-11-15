@@ -1220,7 +1220,7 @@ section#actions {
     margin-right: 0
   }
 }
-/*
+
 @media (max-width: 479px), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .p-la #intro.banner.bs1 {
     background-image: url(../img/vypusk-img/h_det-2x480.jpg);
@@ -1235,4 +1235,3 @@ section#actions {
     background-image: url(../img/vypusk-img/h_event-2x480.jpg);
   }
 }
-*/
