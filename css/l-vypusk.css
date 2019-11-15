@@ -874,6 +874,9 @@ box-shadow:0 2px 6px 1px rgba(0,0,0,0.1);
 border-radius:4px;
 border-bottom:none
 }
+.m-form.picker {
+  display: none
+}
 
 .bg--gray {
 background-color:#EFF1F4
@@ -1889,6 +1892,9 @@ margin:0
 -ms-grid-row-align:center;
 align-self:center;
 text-align:center
+}
+#actions .content-wrapper .t-button {
+width: auto
 }
 
 #grad-calc > div:first-of-type {
