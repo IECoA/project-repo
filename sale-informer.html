@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sale informer</title>
+    <style type="text/css">
+        body {
+           height: 300vh; 
+        }
+        .gtm-sale-container {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            right: 0;
+            bottom: 0; 
+            padding: 30px 20px;
+            background-color: dimgray;
+        }
+        .gtm-sale-close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="tempButton">Show</button>
+    <div class="gtm-sale-container" id="sale-info">
+        <h4>
+            Тестовый заголовок
+        </h4>
+        <p>
+            Только до такого числа скидка 45% на всё
+        </p>
+        <div class="gtm-sale-close-icon" id="gtm-close-icon">&#10006;</div>
+    </div>
+
+    <script src="js\_sale.js" charset="utf-8"></script>
+</body>
+</html>
