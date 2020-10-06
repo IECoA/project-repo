@@ -7,7 +7,7 @@ document.getElementById('bs1').insertAdjacentHTML('beforeend', saleHtml);
 
 /*
 document.getElementById("gtm-close-icon").onclick = function() {
-    document.getElementById("sale-info").style.display = "none";
+    document.getElementById("sale-info").style.visibility = "none";
 }
 */
 
@@ -17,25 +17,27 @@ var gtmSaleElement = document.getElementById("sale-info");
 
 //Set Banner Visibility onDomLoad
 document.addEventListener("DOMContentLoaded", () => {
-    gtmSaleElement.style.display = "none";
+    gtmSaleElement.style.visibility = "hidden";
     x = document.cookie.valueOf("gtmSaleStatus");
     cooValue = x.split("=");
     console.log(cooValue[1]);
     if (cooValue[1] != "hidden") {
-        gtmSaleElement.style.display = "flex";
+        gtmSaleElement.style.visibility = "visible";
     } else {
-        gtmSaleElement.style.display = "none";
+        gtmSaleElement.style.visibility = "hidden";
     }
 });
 
 
 // Свитч отображения
 function gtmSaleSwitcher(){
-    if (gtmSaleElement.style.display === "none") {
-        gtmSaleElement.style.display = "flex";
+    if (gtmSaleElement.style.visibility === "hidden") {
+        gtmSaleElement.style.visibility = "visible";
+        gtmSaleElement.style.bottom = "0";
         document.cookie = "gtmSaleStatus=visible;path=/;sameSite=Lax;Secure;expires=Tue, 19 Jan 2038";
     } else {
-        gtmSaleElement.style.display = "none";
+        gtmSaleElement.style.visibility = "hidden";
+        gtmSaleElement.style.bottom = "-230px";
         document.cookie = "gtmSaleStatus=hidden;path=/;sameSite=Lax;Secure;expires=Tue, 19 Jan 2038";
     }
 }
