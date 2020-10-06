@@ -23,8 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(cooValue[1]);
     if (cooValue[1] != "hidden") {
         gtmSaleElement.style.visibility = "visible";
+        gtmSaleElement.style.bottom = "0";
     } else {
         gtmSaleElement.style.visibility = "hidden";
+        gtmSaleElement.style.bottom = "-230px";
     }
 });
 
