@@ -18,10 +18,10 @@ var gtmSaleElement = document.getElementById("sale-info");
 //Set Banner Visibility onDomLoad
 document.addEventListener("DOMContentLoaded", () => {
     gtmSaleElement.style.visibility = "hidden";
-    x = document.cookie.valueOf("gtmSaleStatus");
-    cooValue = x.split("=");
-    console.log(cooValue[1]);
-    if (cooValue[1] != "hidden") {
+    var x = document.cookie.replace(/(?:(?:^|.*;\s*)gtmSaleStatus\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    // cooValue = x.split("=");
+    console.log(x);
+    if (x != "hidden") {
         gtmSaleElement.style.visibility = "visible";
         gtmSaleElement.style.bottom = "0";
     } else {
