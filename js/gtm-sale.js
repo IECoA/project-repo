@@ -30,22 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-// Свитч отображения
-function gtmSaleSwitcher(){
-    if (gtmSaleElement.style.visibility === "hidden") {
-        gtmSaleElement.style.visibility = "visible";
-        gtmSaleElement.style.bottom = "0";
-        document.cookie = "gtmSaleStatus=visible;path=/;sameSite=Lax;Secure;expires=Tue, 19 Jan 2038 23:59:59 GMT";
-    } else {
-        gtmSaleElement.style.visibility = "hidden";
-        gtmSaleElement.style.bottom = "-230px";
-        document.cookie = "gtmSaleStatus=hidden;path=/;sameSite=Lax;Secure;expires=Tue, 19 Jan 2038 23:59:59 GMT";
-    }
+// Свитч отображения через switch
+function gtmSaleSwitch() {
+    switch (gtmSaleElement.style.visibility) {
+        case "hidden":
+            gtmSaleElement.style.visibility = "visible";
+            gtmSaleElement.style.bottom = "0";
+            document.cookie = "gtmSaleStatus=visible;path=/;expires=Tue, 19 Jan 2038 23:59:59 GMT";
+            break;
+        case "visible":
+            gtmSaleElement.style.visibility = "hidden";
+            gtmSaleElement.style.bottom = "-230px";
+            document.cookie = "gtmSaleStatus=hidden;path=/;expires=Tue, 19 Jan 2038 23:59:59 GMT";
+            break;
+        default:
+            break;
+    } 
 }
 
-document.getElementById("gtm-close-icon").onclick = gtmSaleSwitcher;
-document.getElementById("tempButton").onclick = gtmSaleSwitcher;
+// Вызов свитча по элементам
+document.getElementById("gtm-close-icon").onclick = gtmSaleSwitch;
+document.getElementById("tempButton").onclick = gtmSaleSwitch;
 
 
 // Sale Counter
