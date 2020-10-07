@@ -36,11 +36,11 @@ function gtmSaleSwitcher(){
     if (gtmSaleElement.style.visibility === "hidden") {
         gtmSaleElement.style.visibility = "visible";
         gtmSaleElement.style.bottom = "0";
-        document.cookie = "gtmSaleStatus=visible;path=/;sameSite=Lax;Secure;expires=Tue, 19 Jan 2038";
+        document.cookie = "gtmSaleStatus=visible;path=/;sameSite=Lax;Secure;expires=Tue, 19 Jan 2038 23:59:59 GMT";
     } else {
         gtmSaleElement.style.visibility = "hidden";
         gtmSaleElement.style.bottom = "-230px";
-        document.cookie = "gtmSaleStatus=hidden;path=/;sameSite=Lax;Secure;expires=Tue, 19 Jan 2038";
+        document.cookie = "gtmSaleStatus=hidden;path=/;sameSite=Lax;Secure;expires=Tue, 19 Jan 2038 23:59:59 GMT";
     }
 }
 
