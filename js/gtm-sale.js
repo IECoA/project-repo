@@ -79,3 +79,26 @@ function gtmSaleCountdown(endTime) {
 }
 
 gtmSaleCountdown("Oct 16, 2020 11:00");
+
+
+
+// URL Param Checker
+function isTestUserChecker() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const testUser = urlParams.get('usertype');
+    if (testUser === 'toster') {
+        return true;
+    }
+}
+
+
+//Main Function
+document.addEventListener("DOMContentLoaded", () => {
+    if (isTestUserChecker() == true) {
+       console.log('We are gucchi on load') 
+    }
+    else {
+        console.log('Not gucci')
+    }
+});
