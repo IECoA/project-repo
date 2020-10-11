@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
             gtmSaleElement.className = "gtm-sale-container"
             break;
         
+        case "hidden":
+            gtmSaleElement.className = "gtm-sale-container closed"
+            break
+
         default:
             gtmSaleElement.className = "gtm-sale-container closed"
             setTimeout(() => {
