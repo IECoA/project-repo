@@ -4,45 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fixed Sale informer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
     <style type="text/css">
         body {
            height: 300vh; 
         }
         .gtm-sale-container {
             display: flex;
-            visibility: hidden;
+            /*visibility: hidden;*/
             flex-direction: column;
             position: fixed;
             right: 0;
             bottom: 0; 
-            padding: 30px 20px;
-            background-color: #c1c1c1;
-            -webkit-transition: all 0.5s ease-in;
-            -moz-transition: all 0.5s ease-in;
-            -ms-transition: all 0.5s ease-in;
-            -o-transition: all 0.5s ease-in;
-            transition: all 0.5s ease-in;
+            background-color: #87b2bf;
+            background-image: url(img/banners/backgr-1_2x.jpg);
+            background-size: contain;
+            font-family: 'Roboto', sans-serif;
+            -webkit-transition: all .5s cubic-bezier(.45,.05,.55,.95);
+            -moz-transition: all .5s cubic-bezier(.45,.05,.55,.95);
+            -ms-transition: all .5s cubic-bezier(.45,.05,.55,.95);
+            -o-transition: all .5s cubic-bezier(.45,.05,.55,.95);
+            transition: all .5s cubic-bezier(.45,.05,.55,.95);
+            /* temp? */
+            height: 200px;
+            width: 275px;
         }
         .gtm-sale-close-icon {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 5px;
+            right: 5px;
+            font-size: 25px;
             cursor: pointer;
             user-select: none;
+        }
+        .gtm-sale-container.closed {
+            background-image: none;
+            width: 50px;
+            height: 50px;
+            right: 12px;
+            bottom: 12px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            background-color: #3b88cc;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 30px;
+        }
+        .sale-closed{
+            display: none;
+        }
+        .closed .sale-closed {
+            display: block;
+        }
+        .sale-opened {
+            margin: 20px;
+            color: #ffffff;
+            font-weight: 500;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .closed .sale-opened {
+            display: none;
+        }
+        .sale-opened h4 {
+            font-size: 28px;
+            margin: 0;
+        }
+        #gtmTimeLeft {
+            margin-left: 20px;
+            margin: 0 0 0 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
         }
     </style>
 </head>
 <body>
     <button id="tempButton">Show</button>
-    <div class="gtm-sale-container" id="sale-info">
-        <h4>
-            Тестовый заголовок
-        </h4>
-        <p>
-            Только до такого числа скидка 45% на всё
-        </p>
-        <p id="gtmTimeLeft">Загрузка...</p>
-        <div class="gtm-sale-close-icon" id="gtm-close-icon">&#10006;</div>
+    <div class="gtm-sale-container closed" id="sale-info">
+        <div class="sale-opened">
+            <h4>
+                Скидка 50% <br>на всё
+            </h4>
+            <p>
+                Празднуйте вместе с нами
+            </p>
+            <p id="gtmTimeLeft">Загрузка...</p>
+            <div class="gtm-sale-close-icon" id="gtm-close-icon">&#10006;</div>
+        </div>
+        <div class="sale-closed">
+            %
+        </div>
     </div>
 
     <script src="js\gtm-sale.js" charset="utf-8"></script>
