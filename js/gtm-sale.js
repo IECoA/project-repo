@@ -12,9 +12,9 @@ let gtmSaleElement = document.getElementById("sale-info");
 // Set Banner Visibility onLoad and show after X
 
 document.addEventListener("DOMContentLoaded", () => {
-    let x = document.cookie.replace(/(?:(?:^|.*;\s*)gtmSaleStatus\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    console.log(x);
-    switch (x) {
+    let currentBannerCookie = document.cookie.replace(/(?:(?:^|.*;\s*)gtmSaleStatus\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    console.log(currentBannerCookie);
+    switch (currentBannerCookie) {
         case "visible":
             gtmSaleElement.className = "gtm-sale-container"
             break;
